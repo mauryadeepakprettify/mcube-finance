@@ -2,12 +2,12 @@ import "./globals.css";
 import localFont from "next/font/local";
 
 const celeste = localFont({
-  src: "../fonts/CelesteOT.otf",
+  src: "../../public/fonts/CelesteOT.otf",
   variable: "--font-celeste",
 });
 
 const partner = localFont({
-  src: "../fonts/PartnerScript.ttf",
+  src: "../../public/fonts/PartnerScript.ttf",
   variable: "--font-partner",
 });
 
