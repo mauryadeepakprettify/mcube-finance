@@ -1,7 +1,53 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@import "@flaticon/flaticon-uicons/css/all/all";
 
 @theme {
+  --color-primary: #8d181b;
+
+  --color-alpha: #000000b2;
+  --color-beta: #f3f3f3;
+  --color-lambda: #666666;
+
   --font-celeste: var(--font-celeste);
   --font-partner: var(--font-partner);
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-celeste;
+  }
+
+  body::-webkit-scrollbar {
+    @apply w-[8px];
+  }
+
+  body::-webkit-scrollbar-track {
+    @apply shadow-none;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    @apply bg-primary;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+    transition-delay: 9999s;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto max-w-full px-4 sm:max-w-screen-sm sm:px-18 md:max-w-3xl lg:max-w-5xl lg:px-24 xl:max-w-7xl 2xl:max-w-7xl!;
+  }
 }

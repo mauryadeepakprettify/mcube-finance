@@ -1,3 +1,4 @@
+import MainTemplate from "@/components/templates/MainTemplate";
 import "./globals.css";
 import localFont from "next/font/local";
 
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${celeste.variable} ${partner.variable}`}>
-        {children}
+        <MainTemplate>{children}</MainTemplate>
       </body>
     </html>
   );
