@@ -54,11 +54,11 @@ const Footer = () => {
           <div className="flex-2">
             <h3 className="text-lg mb-4">Contact Us</h3>
             <ul >
-              {contact?.map(({ _id, icon, label }) => {
+              {contact?.map(({ _id, icon, label, route }) => {
                 return (
                   <li key={_id} className="mb-4 flex items-start gap-6">
                     <Icon className={`${icon} text-lambda mt-1 text-xl`} />
-                    <p className="text-lambda/80">{label}</p>
+                    <Link href={route} className="text-lambda/80 hover:text-primary transition-all duration-300 ease-in-out">{label}</Link>
                   </li>
                 )
               })}
