@@ -31,16 +31,16 @@ const Footer = () => {
       </div>
 
       <div className="container py-8">
-        <div className="grid grid-cols-4 gap-14">
-          {footerLinks?.map(({ _id, title, links }) => {
+        <div className="flex gap-16">
+          {footerLinks?.map(({ _id, title, links }, idx) => {
             return (
-              <div key={_id}>
+              <div className={`${idx === 1 ? "flex-2" : "flex-1"}`} key={_id}>
                 <h3 className="text-lg mb-4">{title}</h3>
                 <ul >
                   {links?.map(({ _id, label, route }) => {
                     return (
                       <li key={_id} className="mb-1">
-                        <Link href={route} className="text-lambda/80 hover:translate-x-1 hover:text-primary transition-all duration-300 ease-in-out">
+                        <Link href={route} className="text-lambda/80  hover:translate-x-1 hover:text-primary transition-all duration-300 ease-in-out">
                           {label}
                         </Link>
                       </li>
@@ -51,7 +51,7 @@ const Footer = () => {
             )
           })}
 
-          <div>
+          <div className="flex-2">
             <h3 className="text-lg mb-4">Contact Us</h3>
             <ul >
               {contact?.map(({ _id, icon, label }) => {
@@ -65,13 +65,13 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-lg mb-3">Memberships</h3>
-            <ul className="flex items-center gap-6">
+          <div className="flex-2">
+            <h3 className="text-lg mb-3 flex-1">Memberships</h3>
+            <ul className="flex items-center gap-4">
               {members?.map(({ _id, img }) => {
                 return (
                   <li key={_id}>
-                    <Image className="object-contain h-[65px]" src={`/images/member/${img}`} alt="Logo" width={100} height={100} />
+                    <Image className="object-contain h-[60px]" src={`/images/member/${img}`} alt="Logo" width={100} height={100} />
                   </li>
                 )
               })}
