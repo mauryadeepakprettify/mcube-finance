@@ -1,9 +1,14 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import Button from "../atoms/Button"
 import Icon from "../atoms/Icon"
+import { useModal } from "@/hooks/useModal"
 
 const Header = () => {
+
+    const {openModal} = useModal()
+
     return (
         <header className="h-[109px] shadow bg-white sticky top-0 z-20">
             <div className="px-2 sm:px-6 lg:px-12 ">
@@ -13,8 +18,8 @@ const Header = () => {
                     </Link>
 
                     <div className="flex items-center gap-4">
-                        <Button variant="outline">Contact Us</Button>
-                        <Button>Enquire Now</Button>
+                        <Link href="/contact"><Button variant="outline">Contact Us</Button></Link> 
+                        <Button onClick={() => openModal("enquire")} >Enquire Now</Button>
                     </div>
                 </div>
                 <div className="flex justify-between items-center">

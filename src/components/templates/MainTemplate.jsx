@@ -1,3 +1,5 @@
+import Overlay from "../atoms/Overlay"
+import EnquireModal from "../molecules/EnquireModal"
 import Footer from "../organisms/Footer"
 import Header from "../organisms/Header"
 
@@ -8,6 +10,8 @@ const MainTemplate = ({ children }) => {
             <main>
                 {children}
             </main>
+            <Overlay />
+            <EnquireModal />
             <Footer />
         </>
     )

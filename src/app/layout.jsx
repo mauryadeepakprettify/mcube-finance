@@ -2,6 +2,7 @@ import MainTemplate from "@/components/templates/MainTemplate";
 import "./globals.css";
 import localFont from "next/font/local";
 import ReduxProvider from "@/store/provider";
+import { Toaster } from "react-hot-toast";
 
 const celeste = localFont({
   src: "../../public/fonts/CelesteOT.otf",
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${celeste.variable} ${partner.variable}`}>
+        <Toaster position="top-right"  />
         <ReduxProvider>
           <MainTemplate>{children}</MainTemplate>
         </ReduxProvider>

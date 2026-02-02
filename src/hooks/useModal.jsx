@@ -1,6 +1,6 @@
 "use client";
+import { setIsModal, setModalData } from "@/store/slices/modalSlice";
 import { useDispatch } from "react-redux";
-import { setIsModal, setModalData } from "@/store/slice/modalSlice";
 
 export const useModal = () => {
     const dispatch = useDispatch();

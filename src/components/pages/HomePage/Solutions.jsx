@@ -4,13 +4,15 @@ import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination } from 'swiper/modules'
 
-// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import Icon from "@/components/atoms/Icon"
 
 const Solutions = () => {
+
+    const offset = `${42 - data.length}%`;
+
     return (
         <section className="py-20 relative overflow-hidden">
             <Image
@@ -77,8 +79,13 @@ const Solutions = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className="swiper-button-prev top-auto! left-[35%]! -bottom-2!"><Icon className="fi-rr-angle-right rotate-180  text-lambda" /></div>
-                <div className="swiper-button-next top-auto! right-[35%]! -bottom-2!"><Icon className="fi-rr-angle-right text-lambda " /></div>
+                <div className="swiper-button-prev top-auto! -bottom-2!" style={{ 'left': offset }}>
+                    <Icon className="fi-rr-angle-right rotate-180 text-lambda" />
+                </div>
+
+                <div className="swiper-button-next top-auto! -bottom-2!" style={{ 'right': offset }}>
+                    <Icon className="fi-rr-angle-right text-lambda" />
+                </div>
             </div>
         </section>
     )
