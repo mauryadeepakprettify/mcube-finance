@@ -1,9 +1,14 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import Icon from "../atoms/Icon"
 import Button from "../atoms/Button"
+import { useModal } from "@/hooks/useModal"
 
 const Footer = () => {
+
+  const {openModal} = useModal()
+
   return (
     <footer className="">
       <div className="py-2 border-b border-[#7F7E7E40]">
@@ -25,7 +30,7 @@ const Footer = () => {
               })}
             </ul>
 
-            <Button>Enquire Now</Button>
+            <Button onClick={() => openModal("enquire")}>Enquire Now</Button>
           </div>
         </div>
       </div>

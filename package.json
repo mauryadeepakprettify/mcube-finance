@@ -16,7 +16,8 @@
     "react-dom": "19.2.3",
     "react-hot-toast": "^2.6.0",
     "react-redux": "^9.2.0",
-    "swiper": "^12.1.0"
+    "swiper": "^12.1.0",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -1,12 +1,13 @@
 "use client";
 import CloseModal from "../atoms/CloseModal";
 import { useSelector } from "react-redux";
-import { successToast } from "@/lib/toast";
+import { errorToast, successToast } from "@/lib/toast";
 import Image from "next/image";
 import Textarea from "../atoms/Textarea";
 import Input from "../atoms/Input";
 import Button from "../atoms/Button";
 import { useState } from "react";
+import { enquireSchema } from "@/lib/validation";
 
 const EnquireModal = () => {
     const { isModal } = useSelector((state) => state.modal);
@@ -28,8 +29,15 @@ const EnquireModal = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        successToast("Enquiry submitted successfully");
-    }
+
+        try {
+            enquireSchema.validateSync(formData, { abortEarly: true });
+            successToast("Enquiry submitted successfully");
+        } catch (error) {
+            errorToast(error.message);
+        }
+    };
+
 
     return (
         <div
@@ -40,28 +48,31 @@ const EnquireModal = () => {
                 <p className="text-center text-lambda/80 leading-[20px]">Get expert guidance for your successful real estate journey.</p>
                 <form className="w-full mt-10 flex flex-col gap-2 items-center" onSubmit={handleSubmit}>
                     <Input
-                        label="Name"
+                        label="Name*"
                         name="name"
+                        type="text"
                         id="name"
                         onChange={handleChange}
                         value={formData.name}
                     />
                     <Input
-                        label="Email"
+                        label="Email*"
                         name="email"
+                        type="email"
                         id="email"
                         onChange={handleChange}
                         value={formData.email}
                     />
                     <Input
-                        label="Phone"
+                        label="Phone*"
                         name="phone"
+                        type="number"
                         id="phone"
                         onChange={handleChange}
                         value={formData.phone}
                     />
                     <Textarea
-                        label="Message"
+                        label="Message*"
                         name="message"
                         id="message"
                         onChange={handleChange}
