@@ -7,22 +7,26 @@ import { useModal } from "@/hooks/useModal"
 
 const Header = () => {
 
-    const {openModal} = useModal()
+    const { openModal } = useModal()
 
     return (
-        <header className="h-[109px] shadow bg-white sticky top-0 z-20">
+        <header className=" shadow bg-white sticky top-0 z-20">
             <div className="px-2 sm:px-6 lg:px-12 ">
                 <div className="flex items-center justify-between py-2">
                     <Link href="/">
-                        <Image src="/logo.svg" alt="Logo" width={196} height={60} />
+                        <Image className="lg:w-[196px] w-[140px]" src="/logo.svg" alt="Logo" width={196} height={60} />
                     </Link>
 
-                    <div className="flex items-center gap-4">
-                        <Link href="/contact"><Button variant="outline">Contact Us</Button></Link> 
+                    <div className="hidden lg:flex items-center gap-4">
+                        <Link href="/contact"><Button variant="outline">Contact Us</Button></Link>
                         <Button onClick={() => openModal("enquire")} >Enquire Now</Button>
                     </div>
+
+                    <button onClick={() => openModal("menu")} className="lg:hidden cursor-pointer">
+                        <Icon className=" text-2xl  text-lambda fi-rr-bars-staggered" />
+                    </button>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="hidden lg:flex justify-between items-center">
                     <ul className="flex items-center gap-[43px]">
                         {data.map(({ _id, label, route, subMenu }) => {
                             return (

@@ -14,43 +14,44 @@ const Solutions = () => {
     const offset = `${42 - data.length}%`;
 
     return (
-        <section className="py-20 relative overflow-hidden">
+        <section className=" container lg:px-0 lg:max-w-none lg:py-20 py-8 relative overflow-hidden">
             <Image
                 src="/vector/dot_b.svg"
                 alt=""
                 width={258}
                 height={97}
-                className="absolute bottom-0 right-0"
+                className="absolute lg:block hidden bottom-0 right-0"
             />
-            <div className="flex gap-28">
-                <figure className="w-[400px] h-[650px] shrink-0">
+            <div className="flex lg:flex-row flex-col lg:gap-28 gap-6">
+                <figure className="lg:w-[400px] w-full lg:h-[650px] h-[300px] shrink-0">
                     <Image
-                        className="object-cover h-full w-full"
+                        className="object-cover  h-full w-full"
                         src="/images/banner/thinking.svg"
                         alt=""
                         width={400}
                         height={650}
                     />
                 </figure>
-                <div className="w-[calc(100%-400px)] py-8">
-                    <h2 className="text-5xl leading-[48px] mb-4 max-w-[500px]">
+                <div className="lg:w-[calc(100%-400px)] w-full lg:py-8 pb-8">
+                    <h2 className=" text-[28px] leading-[28px] lg:text-5xl text-center lg:text-left lg:leading-[48px] mb-4 max-w-[500px]">
                         Partnering to Solve Your Business Challenges
                     </h2>
-                    <p className="text-lambda max-w-[620px]">
+                    <p className="text-lambda text-center lg:text-left max-w-[620px]">
                         We offer deep and broad real estate experience through our senior
                         managers and the ability to offer scale and flexibility through our
                         analysts and associates.
                     </p>
                 </div>
             </div>
-            <div className="right-0 left-[240px] absolute top-[42%] service-slider">
+
+            <div className="right-0 left-[240px] lg:absolute top-[42%] service-slider">
                 <Swiper
-                    className="pb-18! "
+                    className=" lg:pb-18! "
                     loop={false}
-                    slidesPerView={1}
+                    slidesPerView={1.2}
                     breakpoints={{
                         640: {
-                            slidesPerView: 1,
+                            slidesPerView: 1.2,
                         },
                         768: {
                             slidesPerView: 2,
@@ -79,11 +80,11 @@ const Solutions = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className="swiper-button-prev top-auto! -bottom-2!" style={{ 'left': offset }}>
+                <div className="swiper-button-prev hidden! lg:flex top-auto! -bottom-2!" style={{ 'left': offset }}>
                     <Icon className="fi-rr-angle-right rotate-180 text-lambda" />
                 </div>
 
-                <div className="swiper-button-next top-auto! -bottom-2!" style={{ 'right': offset }}>
+                <div className="swiper-button-next hidden! lg:flex top-auto! -bottom-2!" style={{ 'right': offset }}>
                     <Icon className="fi-rr-angle-right text-lambda" />
                 </div>
             </div>

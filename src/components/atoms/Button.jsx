@@ -10,7 +10,7 @@ const Button = ({ children, onClick, className, type = "button", disabled = fals
         <button
             type={type}
             onClick={onClick}
-            className={`cursor-pointer flex items-center gap-2 transition-all duration-300 ease-in-out py-[8px] px-[20px] ${variants[variant]} ${className}`}
+            className={`cursor-pointer lg:text-base text-sm flex items-center gap-2 transition-all duration-300 ease-in-out py-[8px] px-[20px] ${variants[variant]} ${className}`}
             disabled={disabled}
         >
             {children}

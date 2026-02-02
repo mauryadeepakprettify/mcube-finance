@@ -50,7 +50,7 @@
   }
 
   .service-slider > .swiper > .swiper-pagination {
-    @apply flex justify-center items-center gap-3
+    @apply lg:flex hidden justify-center items-center gap-3
   }
 
   .service-slider > .swiper > .swiper-pagination > .swiper-pagination-bullet{

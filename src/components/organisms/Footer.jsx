@@ -7,18 +7,18 @@ import { useModal } from "@/hooks/useModal"
 
 const Footer = () => {
 
-  const {openModal} = useModal()
+  const { openModal } = useModal()
 
   return (
     <footer className="">
       <div className="py-2 border-b border-[#7F7E7E40]">
         <div className="container flex items-center justify-between">
           <Link href="/">
-            <Image src="/logo.svg" alt="Logo" width={196} height={60} />
+            <Image className=" lg:w-[196px] w-[140px] " src="/logo.svg" alt="Logo" width={196} height={60} />
           </Link>
 
           <div className="flex items-center gap-10">
-            <ul className="flex items-center gap-4">
+            <ul className="hidden lg:flex items-center gap-4">
               {socialLinks?.map(({ _id, icon, route }) => {
                 return (
                   <li key={_id}>
@@ -36,10 +36,10 @@ const Footer = () => {
       </div>
 
       <div className="container py-8">
-        <div className="flex gap-16">
+        <div className="flex flex-wrap gap-4 lg:gap-16">
           {footerLinks?.map(({ _id, title, links }, idx) => {
             return (
-              <div className={`${idx === 1 ? "flex-2" : "flex-1"}`} key={_id}>
+              <div className={`${idx === 1 ? "flex-2" : "flex-2 lg:flex-1"}`} key={_id}>
                 <h3 className="text-lg mb-4">{title}</h3>
                 <ul >
                   {links?.map(({ _id, label, route }) => {
@@ -56,9 +56,9 @@ const Footer = () => {
             )
           })}
 
-          <div className="flex-2">
+          <div className="w-full lg:flex-2">
             <h3 className="text-lg mb-4">Contact Us</h3>
-            <ul >
+            <ul className="">
               {contact?.map(({ _id, icon, label, route }) => {
                 return (
                   <li key={_id} className="mb-4 flex font-extralight items-start gap-6">
@@ -70,13 +70,13 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex-2">
+          <div className="w-full lg:flex-2">
             <h3 className="text-lg mb-3 flex-1">Memberships</h3>
-            <ul className="flex items-center gap-4">
+            <ul className="flex items-center gap-6">
               {members?.map(({ _id, img }) => {
                 return (
                   <li key={_id}>
-                    <Image className="object-contain h-[60px]" src={`/images/member/${img}`} alt="Logo" width={100} height={100} />
+                    <Image className="object-contain w-[50px] lg:w-[60px]" src={`/images/member/${img}`} alt="Logo" width={100} height={100} />
                   </li>
                 )
               })}
@@ -87,7 +87,7 @@ const Footer = () => {
       </div>
 
       <div className="border border-top  border-[#D6D3D3]">
-        <p className="text-center text-lambda/70 leading-[24px] py-6">
+        <p className="text-center text-lambda/70 leading-[24px] lg:py-6 py-4">
           &copy; 2026 MCube Financial. All Rights Reserved.
         </p>
       </div>
