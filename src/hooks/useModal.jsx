@@ -8,8 +8,13 @@ export const useModal = () => {
     const openModal = (type, data = null) => {
         dispatch(setIsModal(type));
         dispatch(setModalData(data));
+        document.body.style.overflow = "hidden";
     };
-    const closeModal = () => dispatch(setIsModal(null));
+
+    const closeModal = () => {
+        dispatch(setIsModal(null));
+        document.body.style.overflow = "auto";
+    };
 
     return { openModal, closeModal };
 };

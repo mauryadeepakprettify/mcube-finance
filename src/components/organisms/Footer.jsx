@@ -56,7 +56,7 @@ const Footer = () => {
             <ul >
               {contact?.map(({ _id, icon, label, route }) => {
                 return (
-                  <li key={_id} className="mb-4 flex items-start gap-6">
+                  <li key={_id} className="mb-4 flex font-extralight items-start gap-6">
                     <Icon className={`${icon} text-lambda mt-1 text-xl`} />
                     <Link href={route} className="text-lambda/80 hover:text-primary transition-all duration-300 ease-in-out">{label}</Link>
                   </li>
