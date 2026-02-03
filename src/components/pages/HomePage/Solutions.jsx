@@ -80,11 +80,11 @@ const Solutions = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className="swiper-button-prev hidden! lg:flex top-auto! -bottom-2!" style={{ 'left': offset }}>
+                <div className="swiper-button-prev hidden! lg:flex! top-auto! -bottom-2!" style={{ 'left': offset }}>
                     <Icon className="fi-rr-angle-right rotate-180 text-lambda" />
                 </div>
 
-                <div className="swiper-button-next hidden! lg:flex top-auto! -bottom-2!" style={{ 'right': offset }}>
+                <div className="swiper-button-next hidden! lg:flex! top-auto! -bottom-2!" style={{ 'right': offset }}>
                     <Icon className="fi-rr-angle-right text-lambda" />
                 </div>
             </div>
