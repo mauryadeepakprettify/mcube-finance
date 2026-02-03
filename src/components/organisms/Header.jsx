@@ -10,7 +10,7 @@ const Header = () => {
     const { openModal } = useModal()
 
     return (
-        <header className=" shadow bg-white sticky top-0 z-20">
+        <header className=" shadow bg-white sticky top-0 z-30">
             <div className="px-2 sm:px-6 lg:px-12 ">
                 <div className="flex items-center justify-between py-2">
                     <Link href="/">

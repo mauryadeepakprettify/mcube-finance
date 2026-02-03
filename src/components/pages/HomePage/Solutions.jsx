@@ -14,7 +14,7 @@ const Solutions = () => {
     const offset = `${42 - data.length}%`;
 
     return (
-        <section className=" container lg:px-0 lg:max-w-none lg:py-20 py-8 relative overflow-hidden">
+        <section className="container lg:py-20 py-8 relative overflow-hidden">
             <Image
                 src="/vector/dot_b.svg"
                 alt=""
@@ -22,8 +22,8 @@ const Solutions = () => {
                 height={97}
                 className="absolute lg:block hidden bottom-0 right-0"
             />
-            <div className="flex lg:flex-row flex-col lg:gap-28 gap-6">
-                <figure className="lg:w-[400px] w-full lg:h-[650px] h-[300px] shrink-0">
+            <div className="flex md:flex-row flex-col xl:gap-28 lg:gap-10 gap-6">
+                <figure className="lg:w-[400px] md:w-[350px] w-full md:h-[500px] lg:h-[650px] h-[300px] shrink-0">
                     <Image
                         className="object-cover  h-full w-full"
                         src="/images/banner/thinking.svg"
@@ -32,11 +32,11 @@ const Solutions = () => {
                         height={650}
                     />
                 </figure>
-                <div className="lg:w-[calc(100%-400px)] w-full lg:py-8 pb-8">
-                    <h2 className=" text-[28px] leading-[28px] lg:text-5xl text-center lg:text-left lg:leading-[48px] mb-4 max-w-[500px]">
+                <div className="lg:w-[calc(100%-400px)] md:w-[calc(100%-350px)] w-full md:py-8 pb-8">
+                    <h2 className=" text-[28px] leading-[28px] lg:text-5xl text-center md:text-left lg:leading-[48px] mb-4 max-w-[500px]">
                         Partnering to Solve Your Business Challenges
                     </h2>
-                    <p className="text-lambda text-center lg:text-left max-w-[620px]">
+                    <p className="text-lambda text-center md:text-left max-w-[620px]">
                         We offer deep and broad real estate experience through our senior
                         managers and the ability to offer scale and flexibility through our
                         analysts and associates.
@@ -44,7 +44,7 @@ const Solutions = () => {
                 </div>
             </div>
 
-            <div className="right-0 left-[240px] lg:absolute top-[42%] service-slider">
+            <div className="right-0 left-[100px] lg:left-[240px] md:absolute lg:top-[42%] top-[48%] service-slider">
                 <Swiper
                     className=" lg:pb-18! "
                     loop={false}
@@ -54,14 +54,14 @@ const Solutions = () => {
                             slidesPerView: 1.2,
                         },
                         768: {
-                            slidesPerView: 2,
+                            slidesPerView: 1.9,
                         },
                         1024: {
+                            slidesPerView: 2.2,
+                        },
+                        1280: {
                             slidesPerView: 2.7,
-                        },
-                        1440: {
-                            slidesPerView: 3.7,
-                        },
+                        }
                     }}
                     spaceBetween={20}
                     speed={900}

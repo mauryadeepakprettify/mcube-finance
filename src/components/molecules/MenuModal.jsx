@@ -15,7 +15,7 @@ const MenuModal = () => {
             className={`fixed  pt-16 pb-6 top-0 right-0 bottom-0 z-40 w-full max-w-[420px] bg-white transition-all duration-500 ease-in-out ${isModal === "menu" ? "translate-x-0" : "translate-x-full"}`}
         >
             <div className="flex  flex-col justify-between h-full">
-                <ul className="*:mb-3 px-10 overflow-y-auto">
+                <ul className="*:mb-3 md:px-10 px-6 overflow-y-auto">
                     {data?.map(({ _id, label, route, subMenu }) => {
                         return (
                             <li key={_id}>
@@ -24,7 +24,7 @@ const MenuModal = () => {
                         )
                     })}
                 </ul>
-                <ul className="flex gap-5 border-t px-10 border-lambda/30 pt-4">
+                <ul className="flex gap-5 border-t md:px-10 px-6 border-lambda/30 pt-4">
                     {social?.map(({ _id, label, icon, route }) => {
                         return (
                             <li onClick={closeModal} key={_id}>
