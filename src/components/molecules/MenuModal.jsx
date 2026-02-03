@@ -12,7 +12,7 @@ const MenuModal = () => {
 
     return (
         <div
-            className={`fixed  pt-16 pb-6 top-0 right-0 bottom-0 z-40 w-full max-w-[420px] bg-white transition-all duration-500 ease-in-out ${isModal === "menu" ? "translate-x-0" : "translate-x-full"}`}
+            className={`fixed  pt-16 pb-6 top-0 right-0 bottom-0 z-40 w-full lg:max-w-[420px] bg-white transition-all duration-500 ease-in-out ${isModal === "menu" ? "translate-x-0" : "translate-x-full"}`}
         >
             <div className="flex  flex-col justify-between h-full">
                 <ul className="*:mb-3 md:px-10 px-6 overflow-y-auto">

@@ -41,7 +41,7 @@ const EnquireModal = () => {
 
     return (
         <div
-            className={`fixed p-10 py-16 top-0 right-0 bottom-0 z-40 w-full max-w-[420px] bg-white transition-all duration-500 ease-in-out ${isModal === "enquire" ? "translate-x-0" : "translate-x-full"}`}
+            className={`fixed p-10 py-16 top-0 right-0 bottom-0 z-40 w-full lg:max-w-[420px] bg-white transition-all duration-500 ease-in-out ${isModal === "enquire" ? "translate-x-0" : "translate-x-full"}`}
         >
             <div className="flex flex-col items-center">
                 <h3 className="text-4xl text-center mb-2">Enquire Now</h3>
