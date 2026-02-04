@@ -37,8 +37,8 @@ const MCubeAdvantage = () => {
                         <Button onClick={() => openModal("enquire")} className="w-fit">Enquire Now <Icon className="fi-rr-angle-right" /></Button>
                     </div>
                     <figure >
-                       {data[activeTab].vid && <video className="h-[381px] w-full object-cover" src={`/video/${data[activeTab].vid}`} autoPlay loop muted poster="/video/conferance.svg"></video>}
-                       {data[activeTab].img && <Image height={381} width={529} className="h-[381px] w-full object-cover" src={`/video/${data[activeTab].img}`} alt="" />}
+                        {data[activeTab].vid && <video className="h-[381px] w-full object-cover" src={`/video/${data[activeTab].vid}`} autoPlay loop muted poster="/video/conferance.svg"></video>}
+                        {data[activeTab].img && <Image height={381} width={529} className="h-[381px] w-full object-cover" src={`/video/${data[activeTab].img}`} alt="" />}
                     </figure>
                 </div>
             </div>

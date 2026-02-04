@@ -10,7 +10,7 @@ const Footer = () => {
   const { openModal } = useModal()
 
   return (
-    <footer className="">
+    <footer className="border-t border-[#7F7E7E40]">
       <div className="py-2 border-b border-[#7F7E7E40]">
         <div className="container flex items-center justify-between">
           <Link href="/">

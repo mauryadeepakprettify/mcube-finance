@@ -30,14 +30,14 @@ const Header = () => {
                     <ul className="flex items-center gap-[43px]">
                         {data.map(({ _id, label, route, subMenu }) => {
                             return (
-                                <li className="relative group before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[4px] before:bg-primary before:transition-all before:duration-500 before:ease-in-out before:z-10 hover:before:w-full" key={_id}>
+                                <li className="relative group before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[3px] before:bg-primary before:transition-all before:duration-500 before:ease-in-out before:z-10 hover:before:w-full" key={_id}>
                                     <Link className="text-lambda pb-[9px] h-full flex items-center gap-2" href={route}>{label} {subMenu && <i className="fi fi-rr-angle-small-down leading-0 group-hover:rotate-180 transition-all duration-300 ease-in-out" />}</Link>
                                     {subMenu && (
                                         <ul className="absolute w-[900px] transition-all origin-top duration-500 ease-in-out group-hover:transform-[perspective(2000px)_translate3d(0,0,0)_rotateX(0deg)_scale3d(1,1,1)_translateY(0px)]  transform-[perspective(2000px)_translate3d(0,0,50px)_rotateX(-90deg)_scale3d(0.86,0.75,1)_translateY(0px)] shadow-lg grid grid-cols-3 gap-4 top-full left-0 bg-white rounded-b-lg p-3 border-t border-lambda/30">
                                             {subMenu.map(({ _id, label, description, icon, route }) => {
                                                 return (
                                                     <li className="rounded-sm hover:bg-beta transition-all duration-300 ease-in-out p-5" key={_id}>
-                                                        <Link href={route} className="flex gap-4">
+                                                        <Link href={`/what-we-do${route}`} className="flex gap-4">
                                                             <Icon className={`${icon} text-2xl text-primary transition-all duration-300 ease-in-out`} />
                                                             <div>
                                                                 <p className="text-[18px] mb-1 leading-[22px] transition-all duration-300 ease-in-out">{label}</p>
