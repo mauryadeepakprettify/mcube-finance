@@ -1,9 +1,9 @@
 import Link from "next/link"
 import Icon from "../atoms/Icon"
 
-const ServiceCard = ({ icon, label, description, route }) => {
+const ServiceCard = ({ icon, label, description, route, className = "" }) => {
     return (
-        <div className="bg-beta lg:h-[264px] h-[220px] p-7 pb-12 flex flex-col justify-between group">
+        <div className={` lg:h-[264px] h-[220px] p-7 pb-12 flex flex-col justify-between group ${className ? className : "bg-beta"}`}>
             <div>
                 <div className="flex items-start gap-5 justify-between mb-3">
                     <h3 className="lg:text-2xl text-xl lg:leading-[30px] leading-[26px]">{label}</h3> <Icon className={`${icon} text-primary mt-1 text-3xl lg:text-4xl`} />

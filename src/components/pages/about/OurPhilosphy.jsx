@@ -7,7 +7,6 @@ const OurPhilosphy = () => {
 
     const { accordionIndex } = useSelector((state) => state.ui)
 
-
     return (
         <section className="py-8 lg:py-16">
             <div className="container  grid grid-cols-2 gap-6 lg:gap-10 xl:gap-18">

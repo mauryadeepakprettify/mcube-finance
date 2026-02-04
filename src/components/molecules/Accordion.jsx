@@ -10,8 +10,8 @@ const Accordion = ({ data, index }) => {
 
     const isOpen = accordionIndex === index
 
-    const handleAccordionClick = (index) => {
-        dispatch(setAccordionIndex(index))
+    const handleAccordionClick = (i) => {
+        dispatch(setAccordionIndex(i))
     }
 
     return (

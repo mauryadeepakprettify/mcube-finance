@@ -7,7 +7,7 @@ import { Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import Icon from "@/components/atoms/Icon"
+import SlideBtn from "@/components/atoms/SlideBtn"
 
 const Solutions = () => {
 
@@ -80,13 +80,9 @@ const Solutions = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className="swiper-button-prev hidden! lg:flex! top-auto! -bottom-2!" style={{ 'left': offset }}>
-                    <Icon className="fi-rr-angle-right rotate-180 text-lambda" />
-                </div>
 
-                <div className="swiper-button-next hidden! lg:flex! top-auto! -bottom-2!" style={{ 'right': offset }}>
-                    <Icon className="fi-rr-angle-right text-lambda" />
-                </div>
+                <SlideBtn className="swiper-button-prev top-auto! -bottom-2!" offset={offset} />
+                <SlideBtn className="swiper-button-next top-auto! -bottom-2!" offset={offset} />
             </div>
         </section>
     )
