@@ -5,7 +5,6 @@
 @theme {
   --color-primary: #8d181b;
 
-  --color-alpha: #000000b2;
   --color-beta: #f3f3f3;
   --color-lambda: #666666;
 
@@ -44,28 +43,29 @@
 }
 
 @layer components {
-
-  .swiper-navigation-icon{
+  .swiper-navigation-icon {
     @apply hidden;
   }
 
   .service-slider > .swiper > .swiper-pagination {
-    @apply lg:flex hidden justify-center items-center gap-3
+    @apply hidden items-center justify-center gap-3 lg:flex;
   }
 
-  .service-slider > .swiper > .swiper-pagination > .swiper-pagination-bullet{
-    @apply w-[9px] h-[9px] opacity-100 bg-alpha;
+  .service-slider > .swiper > .swiper-pagination > .swiper-pagination-bullet {
+    @apply h-[9px] w-[9px] bg-black/70 opacity-100;
   }
 
-  .service-slider > .swiper > .swiper-pagination > .swiper-pagination-bullet-active{
-    @apply bg-primary! ring-1 ring-primary ring-offset-6 ring-offset-white ;
+  .service-slider
+    > .swiper
+    > .swiper-pagination
+    > .swiper-pagination-bullet-active {
+    @apply bg-primary! ring-primary ring-1 ring-offset-6 ring-offset-white;
   }
 
   .swiper-button-prev,
-  .swiper-button-next{
-    @apply w-[42px] h-[42px] rounded-full border border-lambda;
+  .swiper-button-next {
+    @apply border-lambda h-[42px] w-[42px] rounded-full border;
   }
- 
 }
 
 @layer utilities {

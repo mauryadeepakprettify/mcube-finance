@@ -19,7 +19,7 @@ const Textarea = ({
                 rows={rows}
                 placeholder={placeholder}
                 required={required}
-                className="peer border-lambda/50 focus:border-primary w-full resize-none border-b bg-transparent pt-5 pb-2 text-alpha transition-all duration-500 ease-in-out outline-none"
+                className="peer border-lambda/50 focus:border-primary w-full resize-none border-b bg-transparent pt-5 pb-2 text-black/70 transition-all duration-500 ease-in-out outline-none"
             />
             <label
                 htmlFor={id}

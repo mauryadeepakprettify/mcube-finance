@@ -19,7 +19,7 @@ const MenuModal = () => {
                     {data?.map(({ _id, label, route, subMenu }) => {
                         return (
                             <li key={_id}>
-                                <Link className="text-3xl text-alpha transform hover:translate-x-2 hover:text-primary transition-all duration-300 ease-in-out" href={route}>{label}</Link>
+                                <Link className="text-3xl text-black/70 transform hover:translate-x-2 hover:text-primary transition-all duration-300 ease-in-out" href={route}>{label}</Link>
                             </li>
                         )
                     })}

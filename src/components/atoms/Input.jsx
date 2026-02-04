@@ -16,7 +16,7 @@ const Input = ({
                 onChange={onChange}
                 value={value}
                 type={type}
-                className={`peer border-lambda/50 focus:border-primary w-full border-b bg-transparent pt-5 pb-2 text-alpha transition-all duration-500 ease-in-out outline-none ${type === "number" ? "[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" : ""}`}
+                className={`peer border-lambda/50 focus:border-primary w-full border-b bg-transparent pt-5 pb-2 text-black/70 transition-all duration-500 ease-in-out outline-none ${type === "number" ? "[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" : ""}`}
                 placeholder={placeholder}
                 required={required}
             />
