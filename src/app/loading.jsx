@@ -1,10 +1,9 @@
-
 const loading = () => {
-    return (
-        <div className="flex fixed inset-0 justify-center items-center h-screen">
-            <span className="animate-spin block rounded-full h-[39px] w-[39px] border-2 border-b-3 border-alpha/50  border-b-primary"></span>
-        </div>
-    )
-}
+  return (
+    <div className="fixed inset-0 flex h-screen items-center justify-center">
+      <span className="border-alpha/50 border-b-primary block h-[39px] w-[39px] animate-spin rounded-full border-2 border-b-3"></span>
+    </div>
+  );
+};
 
-export default loading
+export default loading;

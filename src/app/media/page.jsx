@@ -1,8 +1,7 @@
+import Media from "@/components/pages/media";
 
 const page = () => {
-    return (
-        <div>page</div>
-    )
-}
+  return <Media />;
+};
 
-export default page
+export default page;

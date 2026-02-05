@@ -1,32 +1,39 @@
-"use client"
-import Image from "next/image"
-import Link from "next/link"
-import Icon from "../atoms/Icon"
-import Button from "../atoms/Button"
-import { useModal } from "@/hooks/useModal"
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import Icon from "../atoms/Icon";
+import Button from "../atoms/Button";
+import { useModal } from "@/hooks/useModal";
 
 const Footer = () => {
-
-  const { openModal } = useModal()
+  const { openModal } = useModal();
 
   return (
     <footer className="border-t border-[#7F7E7E40]">
-      <div className="py-2 border-b border-[#7F7E7E40]">
+      <div className="border-b border-[#7F7E7E40] py-2">
         <div className="container flex items-center justify-between">
           <Link href="/">
-            <Image className=" lg:w-[196px] w-[140px] " src="/logo.svg" alt="Logo" width={196} height={60} />
+            <Image
+              className="w-[140px] lg:w-[196px]"
+              src="/logo.svg"
+              alt="Logo"
+              width={196}
+              height={60}
+            />
           </Link>
 
           <div className="flex items-center gap-10">
-            <ul className="hidden lg:flex items-center gap-4">
+            <ul className="hidden items-center gap-4 lg:flex">
               {socialLinks?.map(({ _id, icon, route }) => {
                 return (
                   <li key={_id}>
                     <Link href={route}>
-                      <Icon className={`${icon} text-lambda hover:text-primary transition-all duration-300 ease-in-out text-2xl`} />
+                      <Icon
+                        className={`${icon} text-lambda hover:text-primary text-2xl transition-all duration-300 ease-in-out`}
+                      />
                     </Link>
                   </li>
-                )
+                );
               })}
             </ul>
 
@@ -39,71 +46,90 @@ const Footer = () => {
         <div className="flex flex-wrap gap-4 lg:gap-16">
           {footerLinks?.map(({ _id, title, links }, idx) => {
             return (
-              <div className={`${idx === 1 ? "flex-2" : "flex-2 lg:flex-1"}`} key={_id}>
-                <h3 className="text-lg mb-4">{title}</h3>
-                <ul >
+              <div
+                className={`${idx === 1 ? "flex-2" : "flex-2 lg:flex-1"}`}
+                key={_id}
+              >
+                <h3 className="mb-4 text-lg">{title}</h3>
+                <ul>
                   {links?.map(({ _id, label, route }) => {
                     return (
                       <li key={_id} className="mb-1">
-                        <Link href={route} className="text-lambda/80  hover:translate-x-1 hover:text-primary transition-all duration-300 ease-in-out">
+                        <Link
+                          href={route}
+                          className="text-lambda/80 hover:text-primary transition-all duration-300 ease-in-out hover:translate-x-1"
+                        >
                           {label}
                         </Link>
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               </div>
-            )
+            );
           })}
 
           <div className="w-full lg:flex-2">
-            <h3 className="text-lg mb-4">Contact Us</h3>
+            <h3 className="mb-4 text-lg">Contact Us</h3>
             <ul className="">
               {contact?.map(({ _id, icon, label, route }) => {
                 return (
-                  <li key={_id} className="mb-4 flex font-extralight items-start gap-6">
+                  <li
+                    key={_id}
+                    className="mb-4 flex items-start gap-6 font-extralight"
+                  >
                     <Icon className={`${icon} text-lambda mt-1 text-xl`} />
-                    <Link href={route} className="text-lambda/80 hover:text-primary transition-all duration-300 ease-in-out">{label}</Link>
+                    <Link
+                      href={route}
+                      className="text-lambda/80 hover:text-primary transition-all duration-300 ease-in-out"
+                    >
+                      {label}
+                    </Link>
                   </li>
-                )
+                );
               })}
             </ul>
           </div>
 
           <div className="w-full lg:flex-2">
-            <h3 className="text-lg mb-3 flex-1">Memberships</h3>
+            <h3 className="mb-3 flex-1 text-lg">Memberships</h3>
             <ul className="flex items-center gap-6">
               {members?.map(({ _id, img }) => {
                 return (
                   <li key={_id}>
-                    <Image className="object-contain w-[50px] lg:w-[60px]" src={`/images/member/${img}`} alt="Logo" width={100} height={100} />
+                    <Image
+                      className="w-[50px] object-contain lg:w-[60px]"
+                      src={`/images/member/${img}`}
+                      alt="Logo"
+                      width={100}
+                      height={100}
+                    />
                   </li>
-                )
+                );
               })}
             </ul>
           </div>
         </div>
-
       </div>
 
-      <div className="border border-top  border-[#D6D3D3]">
-        <p className="text-center text-lambda/70 leading-[24px] lg:py-6 py-4">
+      <div className="border-top border border-[#D6D3D3]">
+        <p className="text-lambda/70 py-4 text-center leading-[24px] lg:py-6">
           &copy; 2026 MCube Financial. All Rights Reserved.
         </p>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
 
 const socialLinks = [
   {
     _id: 1,
     icon: "fi-brands-linkedin",
-    route: "#"
-  }
-]
+    route: "#",
+  },
+];
 
 const footerLinks = [
   {
@@ -113,24 +139,24 @@ const footerLinks = [
       {
         _id: 1,
         label: "About Us",
-        route: "/about"
+        route: "/about",
       },
       {
         _id: 2,
         label: "Contact Us",
-        route: "/what-we-do"
+        route: "/what-we-do",
       },
       {
         _id: 4,
         label: "Privacy Policy",
-        route: "/media"
+        route: "/media",
       },
       {
         _id: 5,
         label: "Terms & Conditions",
-        route: "/careers"
-      }
-    ]
+        route: "/careers",
+      },
+    ],
   },
   {
     _id: 2,
@@ -139,53 +165,53 @@ const footerLinks = [
       {
         _id: 1,
         label: "Lenders / Financial Institutions",
-        route: "/lenders-financial-institutions"
+        route: "/lenders-financial-institutions",
       },
       {
         _id: 2,
         label: "Investors",
-        route: "/investors"
+        route: "/investors",
       },
       {
         _id: 3,
         label: "Brokers",
-        route: "/brokers"
+        route: "/brokers",
       },
       {
         _id: 4,
         label: "Borrowers",
-        route: "/investors"
-      }
-    ]
-  }
-]
+        route: "/investors",
+      },
+    ],
+  },
+];
 
 const contact = [
   {
     _id: 1,
     icon: "fi fi-rr-marker",
     label: "128 S Tryon Street, Suite #801 Charlotte, NC - 28202",
-    route: "#"
+    route: "#",
   },
   {
     _id: 2,
     icon: "fi fi-rr-envelope",
     label: "contactus@mcubefinancial.com",
-    route: "#"
-  }
-]
+    route: "#",
+  },
+];
 
 const members = [
   {
     _id: 1,
-    img: "CREFC.svg"
+    img: "CREFC.svg",
   },
   {
     _id: 2,
-    img: "ICSC.svg"
+    img: "ICSC.svg",
   },
   {
     _id: 3,
-    img: "MBA.svg"
+    img: "MBA.svg",
   },
-]
+];

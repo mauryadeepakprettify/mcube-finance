@@ -32,7 +32,7 @@ const ServiceListCard = ({ data, index = 0 }) => {
       <div className="flex-4">
         <h3
           onClick={handleActiveIndex}
-          className="relative cursor-pointer mb-5 text-3xl"
+          className="relative mb-5 cursor-pointer text-3xl"
         >
           {title}
           <button
@@ -41,7 +41,7 @@ const ServiceListCard = ({ data, index = 0 }) => {
             <Icon className="fi-rr-angle-up text-lambda text-xl" />
           </button>
         </h3>
-        <p className="text-lambda mb-7 text-xl leading-[26px] max-w-[90%]">
+        <p className="text-lambda mb-7 max-w-[90%] text-xl leading-[26px]">
           {description}
         </p>
         <Link

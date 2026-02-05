@@ -3,12 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 const uiSlice = createSlice({
   name: "ui",
   initialState: {
-    accordionIndex: 0
+    accordionIndex: 0,
   },
   reducers: {
     setAccordionIndex: (state, action) => {
       state.accordionIndex = action.payload;
-    }
+    },
   },
 });
 

@@ -2,12 +2,11 @@ import toast from "react-hot-toast";
 
 const baseStyle = {
   minWidth: "120px",
-  background: "#8d181b", 
+  background: "#8d181b",
   color: "#FFFFFF",
   fontSize: "14px",
   borderRadius: "0px",
   border: "1px solid rgba(255,255,255,0.15)",
-//   boxShadow: "0 8px 30px rgba(0,0,0,0.8)",
   padding: "10px 14px",
 };
 
