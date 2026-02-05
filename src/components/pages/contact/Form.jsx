@@ -1,18 +1,13 @@
 "use client";
-import CloseModal from "../atoms/CloseModal";
-import { useSelector } from "react-redux";
-import { errorToast, successToast } from "@/lib/toast";
-import Image from "next/image";
-import Textarea from "../atoms/Textarea";
-import Input from "../atoms/Input";
-import Button from "../atoms/Button";
+import Input from "@/components/atoms/Input";
+import Textarea from "@/components/atoms/Textarea";
 import { useState } from "react";
 import { enquireSchema } from "@/lib/validation";
-import Select from "../atoms/Select";
+import { successToast, errorToast } from "@/lib/toast";
+import Button from "@/components/atoms/Button";
+import Select from "@/components/atoms/Select";
 
-const EnquireModal = () => {
-  const { isModal } = useSelector((state) => state.modal);
-
+const Form = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -41,23 +36,18 @@ const EnquireModal = () => {
   };
 
   return (
-    <div
-      className={`fixed top-0 right-0 bottom-0 z-40 w-full bg-white p-10 py-16 transition-all duration-500 ease-in-out lg:max-w-[420px] ${isModal === "enquire" ? "translate-x-0" : "translate-x-full"}`}
-    >
-      <div className="flex flex-col items-center">
-        <h3 className="mb-2 text-center text-4xl">Enquire Now</h3>
-        <p className="text-lambda/80 text-center leading-[20px]">
-          Get expert guidance for your successful real estate journey.
-        </p>
-        <form
-          className="mt-10 flex w-full flex-col items-center gap-2"
-          onSubmit={handleSubmit}
-        >
+    <section className="bg-primary py-8 lg:py-16">
+      <div className="container max-w-2xl!">
+        <h2 className="mb-10 text-center text-5xl leading-[54px] text-white">
+          Let’s Discuss Your Real Estate Needs
+        </h2>
+        <form onSubmit={handleSubmit} className="grid gap-8 md:grid-cols-2">
           <Input
             label="Name*"
             name="name"
             type="text"
             id="name"
+            variant="light"
             onChange={handleChange}
             value={formData.name}
           />
@@ -66,6 +56,7 @@ const EnquireModal = () => {
             name="email"
             type="email"
             id="email"
+            variant="light"
             onChange={handleChange}
             value={formData.email}
           />
@@ -74,6 +65,7 @@ const EnquireModal = () => {
             name="phone"
             type="number"
             id="phone"
+            variant="light"
             onChange={handleChange}
             value={formData.phone}
           />
@@ -81,32 +73,31 @@ const EnquireModal = () => {
             label="Interested In*"
             name="interest"
             id="interest"
+            variant="light"
             onChange={handleChange}
             value={formData.interest}
             options={["Lenders", "Borrowers", "Investors", "Others"]}
           />
           <Textarea
+            className="md:col-span-2"
             label="Message*"
             name="message"
             id="message"
+            variant="light"
             onChange={handleChange}
             value={formData.message}
           />
-          <Button className="w-fit" type="submit">
-            Submit
+          <Button
+            variant="white"
+            className="mx-auto md:col-span-2"
+            type="submit"
+          >
+            Enquire Now
           </Button>
         </form>
       </div>
-      <Image
-        className="absolute right-0 bottom-0"
-        src="/icons/m.svg"
-        alt="icon"
-        width={246}
-        height={272}
-      />
-      <CloseModal />
-    </div>
+    </section>
   );
 };
 
-export default EnquireModal;
+export default Form;

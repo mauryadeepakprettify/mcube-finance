@@ -10,6 +10,7 @@ const Button = ({
     outline:
       "border border-lambda text-lambda hover:bg-primary hover:text-white hover:border-primary",
     fill: "bg-primary border border-primary text-white hover:bg-primary/80 hover:border-primary/80",
+    white: "bg-white border border-white text-primary hover:bg-primary hover:text-white hover:border-white",
   };
 
   return (

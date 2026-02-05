@@ -1,5 +1,5 @@
 import Hero from "@/components/organisms/Hero";
-import React from "react";
+
 import ServiceList from "./ServiceList";
 
 const Services = () => {

@@ -1,5 +1,7 @@
+import Contact from "@/components/pages/contact";
+
 const page = () => {
-  return <div>page</div>;
+  return <Contact />
 };
 
 export default page;
