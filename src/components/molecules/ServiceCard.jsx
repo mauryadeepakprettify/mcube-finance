@@ -10,7 +10,7 @@ const ServiceCard = ({ icon, label, description, route, className = "" }) => {
                 </div>
                 <p className="text-lambda/80 mb-4 leading-[22px] text-base max-w-[300px]">{description}</p>
             </div>
-            <Link className="flex items-center gap-2 group-hover:translate-x-2 transition-all duration-300 text-primary lg:text-base text-sm uppercase tracking-widest font-normal" href={route}>Explore <Icon className="fi-rr-arrow-right leading-0 text-lg" /></Link>
+            <Link className="flex items-center gap-2 group-hover:translate-x-2 transition-all duration-300 text-primary lg:text-base text-sm uppercase tracking-widest font-normal" href={route}>Explore <Icon className="fi-rr-arrow-right text-lg" /></Link>
         </div>
     )
 }

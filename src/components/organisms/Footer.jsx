@@ -121,11 +121,6 @@ const footerLinks = [
         route: "/what-we-do"
       },
       {
-        _id: 3,
-        label: "Insights",
-        route: "/insights"
-      },
-      {
         _id: 4,
         label: "Privacy Policy",
         route: "/media"

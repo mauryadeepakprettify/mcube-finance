@@ -113,11 +113,6 @@ const data = [
         ]
     },
     {
-        _id: 3,
-        label: "Insights",
-        route: "/insights"
-    },
-    {
         _id: 4,
         label: "Media",
         route: "/media"
