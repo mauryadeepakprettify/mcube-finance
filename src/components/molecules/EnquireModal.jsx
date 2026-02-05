@@ -6,7 +6,7 @@ import Image from "next/image";
 import Textarea from "../atoms/Textarea";
 import Input from "../atoms/Input";
 import Button from "../atoms/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { enquireSchema } from "@/lib/validation";
 import Select from "../atoms/Select";
 
@@ -39,6 +39,18 @@ const EnquireModal = () => {
       errorToast(error.message);
     }
   };
+
+  useEffect(() => {
+    if (isModal === null) {
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        interest: "",
+        message: "",
+      });
+    }
+  }, [isModal]);
 
   return (
     <div

@@ -12,5 +12,5 @@ const uiSlice = createSlice({
   },
 });
 
-export const { setAccordionIndex, setIsAccordionOpen } = uiSlice.actions;
+export const { setAccordionIndex } = uiSlice.actions;
 export default uiSlice.reducer;
