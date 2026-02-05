@@ -1,6 +1,7 @@
 import Hero from "@/components/organisms/Hero";
 import Map from "./Map";
 import Form from "./Form";
+import Location from "./Location";
 
 const Contact = () => {
   return (
@@ -10,6 +11,7 @@ const Contact = () => {
         title="Contact Us"
         description="Strategic consulting helping brokers strengthen deals and accelerate closings."
       />
+      <Location />
       <Form />
       <Map />
     </>

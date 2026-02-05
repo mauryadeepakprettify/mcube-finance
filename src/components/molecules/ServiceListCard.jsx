@@ -36,7 +36,7 @@ const ServiceListCard = ({ data, index = 0 }) => {
         >
           {title}
           <button
-            className={`absolute top-1/2 right-0 -translate-y-1/2 ${isActive ? "rotate-0" : "rotate-180"} ease transition-all duration-300`}
+            className={`absolute cursor-pointer top-1/2 right-0 -translate-y-1/2 ${isActive ? "rotate-0" : "rotate-180"} ease transition-all duration-300`}
           >
             <Icon className="fi-rr-angle-up text-lambda text-xl" />
           </button>
