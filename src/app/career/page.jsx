@@ -1,5 +1,7 @@
+import Career from "@/components/pages/career";
+
 const page = () => {
-  return <div>page</div>;
+  return <Career />;
 };
 
 export default page;

@@ -72,6 +72,7 @@ const Location = () => {
           })}
         </div>
         <div className="relative col-span-3">
+
           <span className="group absolute top-[40%] left-[29%] -translate-y-1/2">
             <Icon className="fi-rr-dot-circle text-primary animate-pulse cursor-pointer text-[26px]" />
             <span className="bg-primary absolute -bottom-12 left-1/2 -translate-x-1/2 rounded-[5px] px-4 py-3 text-nowrap text-white opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
@@ -124,14 +125,14 @@ const data = [
     title: "India Office",
     info: [
       {
-        lable: "128 S Tryon Street, Suite #801 Charlotte, NC - 28202",
+        lable: "128 S Tryon Street, Suite #801 New Delhi, India",
         route: "https://maps.app.goo.gl/hkE79hpKiLg2xTXz5",
       },
       {
         lable: "contactus@mcubefinancial.com",
       },
       {
-        lable: "+1 -704-504-7630",
+        lable: "+91 - 9876543210",
       },
     ],
   },
