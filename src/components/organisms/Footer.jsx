@@ -149,12 +149,12 @@ const footerLinks = [
       {
         _id: 4,
         label: "Privacy Policy",
-        route: "/media",
+        route: "/privacy-policy",
       },
       {
         _id: 5,
         label: "Terms & Conditions",
-        route: "/careers",
+        route: "/terms-conditions",
       },
     ],
   },

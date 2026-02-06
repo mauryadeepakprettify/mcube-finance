@@ -10,11 +10,10 @@ import { Controller, Navigation, Pagination } from "swiper/modules";
 import SlideBtn from "@/components/atoms/SlideBtn";
 import { useState } from "react";
 import Icon from "@/components/atoms/Icon";
-import { useDispatch } from "react-redux";
-import { setIsModal, setModalData } from "@/store/slices/modalSlice";
+import { useModal } from "@/hooks/useModal";
 
 const TeamMembers = () => {
-  const dispatch = useDispatch();
+  const { openModal } = useModal();
   const [fraction, setFraction] = useState({ current: 1, total: data?.length });
   const [swiper1, setSwiper1] = useState(null);
   const [swiper2, setSwiper2] = useState(null);
@@ -45,8 +44,7 @@ const TeamMembers = () => {
                     />
                     <span
                       onClick={() => {
-                        dispatch(setIsModal("video"));
-                        dispatch(setModalData(video));
+                        openModal("video", video);
                       }}
                       className="absolute bottom-6 left-6 cursor-pointer rounded-full bg-white p-4"
                     >
