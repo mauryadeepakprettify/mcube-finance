@@ -145,6 +145,6 @@ const data = [
     _id: 3,
     img: "discussion.svg",
     about: "Sasha is building new skills and taking on bigger challenges",
-    video: "",
+    video: "/video/security.mp4",
   },
 ];
