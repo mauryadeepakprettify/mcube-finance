@@ -9,8 +9,12 @@ import Image from "next/image";
 import { Controller, Navigation, Pagination } from "swiper/modules";
 import SlideBtn from "@/components/atoms/SlideBtn";
 import { useState } from "react";
+import Icon from "@/components/atoms/Icon";
+import { useDispatch } from "react-redux";
+import { setIsModal, setModalData } from "@/store/slices/modalSlice";
 
 const TeamMembers = () => {
+  const dispatch = useDispatch();
   const [fraction, setFraction] = useState({ current: 1, total: data?.length });
   const [swiper1, setSwiper1] = useState(null);
   const [swiper2, setSwiper2] = useState(null);
@@ -29,9 +33,9 @@ const TeamMembers = () => {
               speed={900}
               onSwiper={setSwiper2}
             >
-              {data?.map(({ _id, img, about }) => (
+              {data?.map(({ _id, img, about, video }) => (
                 <SwiperSlide key={_id}>
-                  <figure>
+                  <figure className="relative">
                     <Image
                       className="h-[462px] w-full object-cover"
                       src={`/images/banner/${img}`}
@@ -39,6 +43,15 @@ const TeamMembers = () => {
                       width={611}
                       height={462}
                     />
+                    <span
+                      onClick={() => {
+                        dispatch(setIsModal("video"));
+                        dispatch(setModalData(video));
+                      }}
+                      className="absolute bottom-6 left-6 cursor-pointer rounded-full bg-white p-4"
+                    >
+                      <Icon className="fi-ss-play text-primary align-middle text-2xl" />
+                    </span>
                   </figure>
                 </SwiperSlide>
               ))}
@@ -46,8 +59,11 @@ const TeamMembers = () => {
           </div>
           <div className="flex flex-col justify-between">
             <div className="team-slider relative flex-1">
+              <p className="text-primary mb-8 tracking-widest uppercase">
+                Meet Our Team
+              </p>
               <Swiper
-                className="h-full"
+                className="h-[calc(100%-55px)]"
                 loop={false}
                 slidesPerView={1}
                 spaceBetween={16}
@@ -71,9 +87,6 @@ const TeamMembers = () => {
                 {data?.map(({ _id, img, about }) => (
                   <SwiperSlide key={_id}>
                     <>
-                      <p className="text-primary mb-8 tracking-widest uppercase">
-                        Meet Our Team
-                      </p>
                       <h2 className="max-w-[80%] text-[40px] leading-[46px]">
                         {about}
                       </h2>
@@ -89,12 +102,13 @@ const TeamMembers = () => {
                 <SlideBtn className="swiper-button-next static!" />
               </div>
             </div>
-            <div>
+            <div className="flex-0">
               <Swiper
-                loop={false}
+                loop={true}
                 slidesPerView={2}
                 spaceBetween={64}
                 allowTouchMove={false}
+                centeredSlides={false}
                 speed={900}
                 onSwiper={setSwiper3}
               >
@@ -119,7 +133,7 @@ const data = [
     _id: 1,
     img: "discussion.svg",
     about: "Sasha is building new skills and taking on bigger challenges",
-    video: "",
+    video: "/video/conferance.mp4",
   },
   {
     _id: 2,
