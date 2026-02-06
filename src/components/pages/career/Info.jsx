@@ -6,7 +6,7 @@ import Link from "next/link";
 const Info = () => {
   return (
     <section className="py-8 lg:py-16">
-      <div className="container max-w-6xl! grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 lg:gap-10 xl:gap-28">
+      <div className="container grid max-w-6xl! grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 lg:gap-10 xl:gap-28">
         <div className="">
           <span className="text-primary mb-3 block text-center text-sm md:text-left lg:mb-5 lg:text-base">
             careers@mcubefinancial.com{" "}
