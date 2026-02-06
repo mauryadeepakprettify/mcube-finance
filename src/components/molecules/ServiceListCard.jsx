@@ -20,7 +20,7 @@ const ServiceListCard = ({ data, index = 0, activeIndex, setActiveIndex }) => {
     <div className="flex gap-18 border-black/20 py-12 not-last:border-b">
       <figure className="flex-3">
         <Image
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover transition-all duration-300 ease-in-out"
           src={`/images/services/${img}`}
           alt={title}
           width={480}

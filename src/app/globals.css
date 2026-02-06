@@ -14,7 +14,7 @@
 
 @layer base {
   html {
-    @apply scroll-smooth scroll-p-[109px];
+    @apply scroll-p-[109px] scroll-smooth;
   }
 
   body {
@@ -60,6 +60,17 @@
     > .swiper-pagination
     > .swiper-pagination-bullet-active {
     @apply bg-primary! ring-primary ring-1 ring-offset-6 ring-offset-white;
+  }
+
+  .team-slider > .swiper > .swiper-pagination {
+    @apply top-auto! bottom-0! h-[2px]!;
+  }
+
+  .team-slider
+    > .swiper
+    > .swiper-pagination
+    > .swiper-pagination-progressbar-fill {
+    @apply bg-primary!;
   }
 
   .swiper-button-prev,
