@@ -2,12 +2,10 @@
 import Image from "next/image";
 import Icon from "../atoms/Icon";
 import Link from "next/link";
-import { useState } from "react";
 
-const ServiceListCard = ({ data, index = 0 }) => {
+const ServiceListCard = ({ data, index = 0, activeIndex, setActiveIndex }) => {
   const { _id, title, description, features, img, route } = data;
 
-  const [activeIndex, setActiveIndex] = useState(0);
   const isActive = activeIndex === index;
 
   const handleActiveIndex = () => {
@@ -36,7 +34,7 @@ const ServiceListCard = ({ data, index = 0 }) => {
         >
           {title}
           <button
-            className={`absolute cursor-pointer top-1/2 right-0 -translate-y-1/2 ${isActive ? "rotate-0" : "rotate-180"} ease transition-all duration-300`}
+            className={`absolute top-1/2 right-0 -translate-y-1/2 cursor-pointer ${isActive ? "rotate-0" : "rotate-180"} ease transition-all duration-300`}
           >
             <Icon className="fi-rr-angle-up text-lambda text-xl" />
           </button>
@@ -52,9 +50,9 @@ const ServiceListCard = ({ data, index = 0 }) => {
         </Link>
 
         <div
-          className={`grid overflow-hidden transition-all duration-300 ease-in-out ${isActive ? "my-7 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"} `}
+          className={`grid transition-all duration-300 ease-in-out ${isActive ? "my-7 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"} `}
         >
-          <ul className="marker:text-primary *:text-lambda ml-6 grid list-disc grid-cols-2 gap-5 *:text-lg *:leading-[26px] marker:text-2xl">
+          <ul className="marker:text-primary *:text-lambda ml-6 grid list-disc grid-cols-2 gap-5 overflow-hidden *:text-lg *:leading-[26px] marker:text-2xl">
             {features?.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}

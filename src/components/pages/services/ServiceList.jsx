@@ -1,11 +1,14 @@
+"use client";
 import ServiceListCard from "@/components/molecules/ServiceListCard";
+import { useState } from "react";
 
 const ServiceList = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <section className="py-8 lg:py-16">
       <div className="container">
         {data?.map((item, index) => (
-          <ServiceListCard key={item._id} data={item} index={index} />
+          <ServiceListCard key={item._id} data={item} index={index} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
         ))}
       </div>
     </section>

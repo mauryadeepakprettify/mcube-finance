@@ -14,7 +14,7 @@
 
 @layer base {
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth scroll-p-[109px];
   }
 
   body {
