@@ -20,7 +20,7 @@ const MCubeAdvantage = () => {
         <h2 className="text-center text-[32px] leading-[36px] max-[375px]:text-[28px] max-[375px]:leading-[32px] md:text-left lg:text-5xl lg:leading-[55px]">
           MCube Advantage
         </h2>
-        <div className="mt-8 md:mt-12">
+        <div className="mt-8 md:mt-8 lg:mt-12">
           <ul className="flex justify-between gap-6 overflow-x-auto border-b border-[#D9D9D9] text-nowrap md:gap-4">
             {data?.map(({ _id, title }, index) => {
               const isActive = activeTab === index;

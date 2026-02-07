@@ -9,7 +9,7 @@ const WhoWeAre = () => {
 
   return (
     <section className="py-8 lg:py-16">
-      <div className="container flex max-w-6xl! flex-col gap-6 md:flex-row lg:gap-10 xl:gap-28">
+      <div className="container flex max-w-6xl! flex-col gap-6 md:gap-0 md:flex-row lg:gap-10 xl:gap-28">
         <div className="flex md:w-[400px] shrink-0 items-center justify-center">
           <Image
             src="/images/banner/york.svg"

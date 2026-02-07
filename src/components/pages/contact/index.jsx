@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <>
       <Hero
-        img="man"
+        vid="man"
         title="Contact Us"
         description="Strategic consulting helping brokers strengthen deals and accelerate closings."
       />

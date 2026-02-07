@@ -23,7 +23,7 @@ const CommonSlider = ({
 
   return (
     <div>
-      <div className="flex items-center justify-between gap-4 md:gap-10">
+      <div className="flex items-center justify-between gap-4 md:gap-6 lg:gap-10">
         <h2 className="text-[32px] leading-[36px] max-[375px]:text-[28px] max-[375px]:leading-[32px] lg:text-5xl lg:leading-[55px]">{title}</h2>
         <hr className="h-px flex-1 border-none bg-black/20" />
         <div className="flex items-center gap-5">
@@ -40,7 +40,7 @@ const CommonSlider = ({
               slidesPerView: 1.2,
             },
             768: {
-              slidesPerView: 2.5,
+              slidesPerView: 2.2,
             },
             1280: {
               slidesPerView: 3,
