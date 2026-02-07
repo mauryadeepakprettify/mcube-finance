@@ -145,4 +145,10 @@ const data = [
     about: "Sasha is building new skills and taking on bigger challenges",
     video: "/video/security.mp4",
   },
+   {
+    _id: 4,
+    img: "discussion.svg",
+    about: "Sasha is building new skills and taking on bigger challenges",
+    video: "/video/security.mp4",
+  },
 ];

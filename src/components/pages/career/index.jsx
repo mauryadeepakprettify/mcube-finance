@@ -1,7 +1,6 @@
 import Hero from "@/components/organisms/Hero";
 import Info from "./Info";
 import Openings from "./Openings";
-import ApplicationForm from "./ApplicationForm";
 import TeamMembers from "./TeamMembers";
 
 const Career = () => {
@@ -15,7 +14,6 @@ const Career = () => {
       <Info />
       <TeamMembers />
       <Openings />
-      <ApplicationForm />
     </>
   );
 };

@@ -1,18 +1,20 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Button from "../atoms/Button";
 import Icon from "../atoms/Icon";
-import { useRouter } from "next/navigation";
 
-const OpeningCard = ({ data }) => {
-  const router = useRouter();
-  const { _id, opening, location, type, details } = data;
+const OpeningCard = ({ data, applicationRef }) => {
+    const { _id, opening, location, type, details } = data;
 
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-  const handleApplyNow = () => {
-    router.push(`/career#application-form`);
-  };
+    const handleApplyNow = (e) => {
+      e.stopPropagation();
+      applicationRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    };
 
   return (
     <div className="border-t border-[#EFEFEF]">
@@ -29,7 +31,11 @@ const OpeningCard = ({ data }) => {
         </div>
 
         <div className="flex items-center gap-10">
-          <Button onClick={handleApplyNow}>Apply Now</Button>
+          <Button
+            onClick={handleApplyNow}
+          >
+            Apply Now
+          </Button>
           <Icon
             className={`fi-rr-angle-down transition-all duration-300 ease-in-out ${
               isOpen ? "rotate-180" : ""
