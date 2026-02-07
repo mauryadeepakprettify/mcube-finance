@@ -13,7 +13,7 @@ const Intro = () => {
         height={150}
         className="absolute bottom-0 left-0 z-10 hidden object-contain md:block"
       />
-      <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 lg:gap-10 xl:gap-32">
+      <div className="container grid grid-cols-1 gap-6 md:grid-cols-2  lg:gap-10 xl:gap-32">
         <div className="">
           <span className="text-primary mb-3 block text-center text-sm uppercase md:text-left lg:mb-5 lg:text-base">
             About MCube Financial

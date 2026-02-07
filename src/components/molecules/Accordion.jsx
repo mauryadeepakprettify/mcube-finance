@@ -17,12 +17,14 @@ const Accordion = ({ data, index }) => {
   return (
     <div
       onClick={() => handleAccordionClick(index)}
-      className={`${isOpen ? "border-primary" : "border-[#D9D9D9]"} cursor-pointer border-l-2 px-8 py-4`}
+      className={`${isOpen ? "border-primary" : "border-[#D9D9D9]"} cursor-pointer border-l-2 px-6 py-3 md:px-8 md:py-4`}
     >
       <div
-        className={`flex items-center justify-between ${isOpen ? "mb-4" : ""}`}
+        className={`flex items-center justify-between ${isOpen ? "mb-2 md:mb-4" : ""}`}
       >
-        <h3 className="text-[20px] leading-[30px]">{title}</h3>
+        <h3 className="text-[18px] leading-[28px] md:text-[20px] md:leading-[30px]">
+          {title}
+        </h3>
         <Icon
           className={`${isOpen ? "fi-rr-minus" : "fi-rr-plus"} text-primary`}
         />
@@ -34,7 +36,9 @@ const Accordion = ({ data, index }) => {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="text-lambda leading-[24px]">{description}</p>
+          <p className="text-lambda text-base leading-[20px] md:leading-[24px]">
+            {description}
+          </p>
         </div>
       </div>
     </div>

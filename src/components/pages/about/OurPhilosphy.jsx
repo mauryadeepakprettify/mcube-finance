@@ -8,7 +8,7 @@ const OurPhilosphy = () => {
 
   return (
     <section className="py-8 lg:py-16">
-      <div className="container grid grid-cols-2 gap-6 lg:gap-10 xl:gap-18">
+      <div className="container grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 xl:gap-18">
         <div>
           <Image
             src={`/images/banner/${data[accordionIndex]?.img}`}
@@ -18,7 +18,7 @@ const OurPhilosphy = () => {
           />
         </div>
         <div>
-          <h2 className="mb-10 text-5xl font-normal">Corporate Philosophy</h2>
+          <h2 className="mb-8 md:mb-10 text-[32px] leading-[36px] max-[375px]:text-[28px] max-[375px]:leading-[32px] md:text-left lg:text-5xl lg:leading-[55px]">Corporate Philosophy</h2>
           <>
             {data?.map((item, index) => (
               <Accordion key={item?._id} data={item} index={index} />

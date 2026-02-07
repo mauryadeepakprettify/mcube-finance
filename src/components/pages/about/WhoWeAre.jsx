@@ -9,14 +9,14 @@ const WhoWeAre = () => {
 
   return (
     <section className="py-8 lg:py-16">
-      <div className="container flex max-w-6xl! gap-6 lg:gap-10 xl:gap-28">
+      <div className="container flex max-w-6xl! flex-col gap-6 md:flex-row lg:gap-10 xl:gap-28">
         <div className="flex w-[400px] shrink-0 items-center justify-center">
           <Image
             src="/images/banner/york.svg"
             alt="Who We Are"
             width={347}
             height={384}
-            className="bg-center bg-no-repeat"
+            className="h-[250px] w-[250px] bg-center bg-no-repeat lg:h-[384px] lg:w-[347px]"
             style={{
               WebkitMaskImage: "url('/icons/m_large.svg')",
               WebkitMaskRepeat: "no-repeat",
@@ -29,15 +29,17 @@ const WhoWeAre = () => {
             }}
           />
         </div>
-        <div className="flex flex-1 flex-col justify-center">
-          <h2 className="mb-4 text-5xl font-normal">{title}</h2>
-          <p className="text-lambda mb-5 leading-[24px]">
+        <div className="flex md:flex-1 flex-col justify-center">
+          <h2 className="mb-3 text-center text-[28px] leading-[28px] md:text-left lg:mb-5 lg:text-5xl lg:leading-[48px]">
+            {title}
+          </h2>
+          <p className="text-lambda mb-4 text-center leading-[24px] md:text-left">
             {isReadMore ? description : description.slice(0, 400) + "..."}
           </p>
           <button
             disabled={description?.length < 400}
             onClick={() => setIsReadMore(!isReadMore)}
-            className="text-primary w-fit cursor-pointer tracking-[2px] uppercase"
+            className="text-primary mx-auto w-fit cursor-pointer text-sm tracking-[2px] uppercase md:mx-0 md:text-left md:text-base"
           >
             {isReadMore ? "Read Less" : "Read More"}{" "}
             <Icon

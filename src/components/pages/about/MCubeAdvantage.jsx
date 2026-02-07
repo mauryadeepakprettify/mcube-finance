@@ -17,15 +17,17 @@ const MCubeAdvantage = () => {
   return (
     <section className="bg-beta py-8 lg:py-16">
       <div className="container max-w-6xl!">
-        <h2 className="text-5xl">MCube Advantage</h2>
-        <div className="mt-12">
-          <ul className="flex justify-between gap-4 border-b border-[#D9D9D9]">
+        <h2 className="text-center text-[32px] leading-[36px] max-[375px]:text-[28px] max-[375px]:leading-[32px] md:text-left lg:text-5xl lg:leading-[55px]">
+          MCube Advantage
+        </h2>
+        <div className="mt-8 md:mt-12">
+          <ul className="flex justify-between gap-6 overflow-x-auto border-b border-[#D9D9D9] text-nowrap md:gap-4">
             {data?.map(({ _id, title }, index) => {
               const isActive = activeTab === index;
               return (
                 <li
                   onClick={() => handleTabClick(index)}
-                  className={`before:bg-primary relative cursor-pointer pb-5 text-xl leading-[30px] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:transition-all before:duration-300 before:content-[''] ${isActive ? " text-black before:w-full" : "text-black/40"}`}
+                  className={`before:bg-primary relative cursor-pointer pb-5 text-lg leading-[24px] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:transition-all before:duration-300 before:content-[''] md:text-xl md:leading-[30px] ${isActive ? " text-black before:w-full" : "text-black/40"}`}
                   key={_id}
                 >
                   {title}
@@ -34,17 +36,19 @@ const MCubeAdvantage = () => {
             })}
           </ul>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-28 md:grid-cols-2">
-          <div className="flex flex-col justify-center">
-            <h3 className="mb-4 text-4xl">{data[activeTab].title}</h3>
-            <p className="text-lambda mb-8 leading-[24px]">
+        <div className="mt-8 grid grid-cols-1 gap-6 md:mt-12 md:grid-cols-2 lg:gap-28">
+          <div className="order-2 flex flex-col justify-center md:order-1">
+            <h3 className=" mb-3 md:mb-4 text-center text-3xl md:text-left md:text-4xl">
+              {data[activeTab].title}
+            </h3>
+            <p className="text-lambda mb-6 md:mb-8 text-base md:text-left text-center leading-[24px]">
               {data[activeTab].description}
             </p>
-            <Button onClick={() => openModal("enquire")} className="w-fit">
+            <Button onClick={() => openModal("enquire")} className="w-fit md:mx-0 mx-auto">
               Enquire Now <Icon className="fi-rr-angle-right" />
             </Button>
           </div>
-          <figure>
+          <figure className="order-1 md:order-2">
             {data[activeTab].vid && (
               <video
                 className="h-[381px] w-full object-cover"

@@ -23,15 +23,15 @@ const CommonSlider = ({
 
   return (
     <div>
-      <div className="flex items-center justify-between gap-10">
-        <h2 className="text-5xl leading-[100%]">{title}</h2>
+      <div className="flex items-center justify-between gap-4 md:gap-10">
+        <h2 className="text-[32px] leading-[36px] max-[375px]:text-[28px] max-[375px]:leading-[32px] lg:text-5xl lg:leading-[55px]">{title}</h2>
         <hr className="h-px flex-1 border-none bg-black/20" />
         <div className="flex items-center gap-5">
           <SlideBtn className="swiper-button-prev static!" />
           <SlideBtn className="swiper-button-next static!" />
         </div>
       </div>
-      <div className="relative mt-12">
+      <div className="relative mt-6 md:mt-12">
         <Swiper
           loop={false}
           slidesPerView={1.2}
