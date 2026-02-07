@@ -18,7 +18,7 @@ const MenuModal = () => {
         <ul className="overflow-y-auto px-6 *:mb-3 md:px-10">
           {data?.map(({ _id, label, route, subMenu }) => {
             return (
-              <li key={_id}>
+              <li onClick={closeModal} key={_id}>
                 <Link
                   className="hover:text-primary transform text-3xl text-black/70 transition-all duration-300 ease-in-out hover:translate-x-2"
                   href={route}
@@ -32,7 +32,7 @@ const MenuModal = () => {
         <ul className="border-lambda/30 flex gap-5 border-t px-6 pt-4 md:px-10">
           {social?.map(({ _id, label, icon, route }) => {
             return (
-              <li onClick={closeModal} key={_id}>
+              <li key={_id}>
                 <Link
                   className="text-lambda/60 hover:text-primary text-[22px] transition-all duration-300 ease-in-out"
                   href={route}

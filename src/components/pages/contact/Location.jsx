@@ -72,21 +72,26 @@ const Location = () => {
           })}
         </div>
         <div className="relative col-span-3">
-
-          <span className="group absolute top-[40%] left-[29%] -translate-y-1/2">
-            <Icon className="fi-rr-dot-circle text-primary animate-pulse cursor-pointer text-[26px]" />
-            <span className="bg-primary absolute -bottom-12 left-1/2 -translate-x-1/2 rounded-[5px] px-4 py-3 text-nowrap text-white opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
-              Charlotte, New York City, USA{" "}
-            </span>
-          </span>
-
-
-          <span className="group absolute top-[55%] right-[16%] -translate-y-1/2">
-            <Icon className="fi-rr-dot-circle text-primary animate-pulse cursor-pointer text-[26px]" />
-            <span className="bg-primary absolute -bottom-12 left-1/2 -translate-x-1/2 rounded-[5px] px-4 py-3 text-nowrap text-white opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
-              123, New Delhi, India
-            </span>
-          </span>
+          {data?.map((item, index) => {
+            const { _id, city } = item;
+            const isActive = activeTab === index;
+            return (
+              <span
+                onClick={() => setActiveTab(index)}
+                key={_id}
+                className={`${index === 0 ? "top-[36%] left-[30%] " : "top-[53%] right-[17%] "} absolute`}
+              >
+                <Icon
+                  className={` ${isActive ? "fi-ss-marker text-[26px]" : "fi-rr-dot-circle animate-pulse text-[20px]"} transition-all duration-300 ease-in-out text-primary cursor-pointer`}
+                />
+                <span
+                  className={`bg-primary absolute -bottom-12 left-1/2 -translate-x-1/2 rounded-[5px] px-4 py-3 text-nowrap text-white transition-all duration-300 ease-in-out ${isActive ? "opacity-100" : "opacity-0"}`}
+                >
+                  {city}
+                </span>
+              </span>
+            );
+          })}
 
           <Image
             src="/images/banner/globe.svg"
@@ -107,6 +112,7 @@ const data = [
   {
     _id: 1,
     title: "US Office",
+    city: "Charlotte, New York City, USA",
     info: [
       {
         lable: "128 S Tryon Street, Suite #801 Charlotte, NC - 28202",
@@ -123,6 +129,7 @@ const data = [
   {
     _id: 2,
     title: "India Office",
+    city: "New Delhi, India",
     info: [
       {
         lable: "128 S Tryon Street, Suite #801 New Delhi, India",
