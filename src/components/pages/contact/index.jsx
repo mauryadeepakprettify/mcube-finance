@@ -1,7 +1,7 @@
 import Hero from "@/components/organisms/Hero";
 import Map from "./Map";
-import Form from "./Form";
 import Location from "./Location";
+import Form from "@/components/organisms/Form";
 
 const Contact = () => {
   return (

@@ -3,7 +3,7 @@ import MediaCard from "@/components/molecules/MediaCard";
 const MediaList = () => {
   return (
     <section className="py-8 lg:py-16">
-      <div className="container grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container grid grid-cols-1 gap-8 lg:gap-5 md:grid-cols-2 lg:grid-cols-3">
         {data?.map((item) => (
           <MediaCard key={item._id} data={item} />
         ))}
