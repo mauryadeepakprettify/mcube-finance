@@ -5,7 +5,7 @@ import Icon from "../atoms/Icon";
 
 const Hero = ({ img, vid, title, description, route, routeLabel }) => {
   return (
-    <section className="relative h-[calc(60vh-76px)] overflow-hidden before:absolute before:inset-0 before:h-full before:w-full before:bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.87%,rgba(0,0,0,0.7)_91.83%)] before:content-[''] md:h-[calc(70vh-76px)] lg:h-[calc(80vh-109px)] xl:h-[calc(100vh-109px)]">
+    <section className="relative h-[373px] overflow-hidden before:absolute before:inset-0 before:h-full before:w-full before:bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.87%,rgba(0,0,0,0.7)_91.83%)] before:content-['']">
       {img && (
         <Image
           className="h-full w-full object-cover"

@@ -149,6 +149,11 @@ const data = [
     ],
   },
   {
+    _id: 3,
+    label: "Projects",
+    route: "/project",
+  },
+  {
     _id: 4,
     label: "Media",
     route: "/media",
