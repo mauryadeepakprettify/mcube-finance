@@ -32,17 +32,17 @@ const ProjectCategory = () => {
                   <Link
                     href="# "
                     key={_id}
-                    className="bg-beta relative overflow-hidden border border-[#B7B7B7] p-5 pb-7"
+                    className="bg-beta h-[193px] group hover:bg-primary transition-all duration-300 ease-in-out  relative overflow-hidden border border-[#B7B7B7] p-5 pb-7"
                   >
-                    <div className="max-w-[85%]">
-                      <Icon className={`text-primary text-4xl ${icon}`} />
-                      <h6 className="mt-3 text-lg leading-[22px]">{stat}</h6>
-                      <p className="text-lambda mt-1 text-sm leading-[20px]">
+                    <div className="max-w-[85%] relative">
+                      <Icon className={`text-primary transition-all duration-300 ease-in-out group-hover:text-white group-hover:text-8xl text-4xl ${icon}`} />
+                      <h6 className="mt-3 transition-all duration-300 ease-in-out group-hover:text-white text-lg leading-[22px]">{stat}</h6>
+                      <p className="text-lambda group-hover:-bottom-full group-hover:absolute group-hover:opacity-0 transition-all duration-300 ease-in-out group-hover:text-white/80 mt-1 text-sm leading-[20px]">
                         {description}
                       </p>
                     </div>
-                    <span className="absolute right-6 bottom-5">
-                      <Icon className="fi-rr-arrow-right text-primary text-lg" />
+                    <span className="absolute right-6 group-hover:translate-x-1 transition-all duration-300 ease-in-out  bottom-5">
+                      <Icon className="fi-rr-arrow-right text-primary transition-all duration-300 ease-in-out  group-hover:text-white text-lg" />
                     </span>
                   </Link>
                 );
@@ -77,7 +77,7 @@ const data = [
         description:
           "Created the model and prepared the rating agency tape, credit and memo.",
         icon: "fi-ts-building",
-        url: "cmbs-balance-sheet-underwriting",
+        url: "credit-and-memo",
       },
       {
         _id: 2,
@@ -85,6 +85,7 @@ const data = [
         description:
           "Underwrote 430-asset, small balance multifamily portfolio for a multinational.",
         icon: "fi-ts-stats",
+        url: "small-balance-multifamily-portfolio",
       },
       {
         _id: 3,
@@ -92,6 +93,7 @@ const data = [
         description:
           "Delivered full underwriting services for single family rental securitization.",
         icon: "fi-ts-sack-dollar",
+        url: "single-family-rental-securitization",
       },
       {
         _id: 4,
@@ -99,6 +101,7 @@ const data = [
         description:
           "Performed underwriting and prepared credit memo for 50-asset hotel portfolio.",
         icon: "fi-ts-wallet",
+        url: "hotel-portfolio",
       },
       {
         _id: 5,
@@ -106,6 +109,7 @@ const data = [
         description:
           "Underwrote a first mortgage with mezzanine financing secured by $45 million",
         icon: "fi-tr-layer-plus",
+        url: "first-mortgage-with-mezzanine-financing",
       },
       {
         _id: 6,
@@ -113,22 +117,74 @@ const data = [
         description:
           "Underwrote bridge loans including a 13-property industrial portfolio and 2-property.",
         icon: "fi-ts-road-barrier",
+        url: "bridge-loans",
       },
     ],
   },
   {
     _id: 2,
     title: "Sizings/Lease Abstraction",
-    projects: [],
+    projects: [
+      {
+        _id: 1,
+        stat: "$1.07 billion",
+        description:
+          "Created the model and prepared the rating agency tape, credit and memo.",
+        icon: "fi-ts-building",
+        url: "credit-and-memo",
+      },
+      {
+        _id: 2,
+        stat: "$560 million",
+        description:
+          "Underwrote 430-asset, small balance multifamily portfolio for a multinational.",
+        icon: "fi-ts-stats",
+        url: "small-balance-multifamily-portfolio",
+      },
+    ],
   },
   {
     _id: 3,
     title: "Asset management/Loan Workouts",
-    projects: [],
+    projects: [
+      {
+        _id: 3,
+        stat: "$230 million",
+        description:
+          "Delivered full underwriting services for single family rental securitization.",
+        icon: "fi-ts-sack-dollar",
+        url: "single-family-rental-securitization",
+      },
+      {
+        _id: 4,
+        stat: "$225 million",
+        description:
+          "Performed underwriting and prepared credit memo for 50-asset hotel portfolio.",
+        icon: "fi-ts-wallet",
+        url: "hotel-portfolio",
+      },
+    ],
   },
   {
     _id: 4,
     title: "Agency Underwriting",
-    projects: [],
+    projects: [
+      {
+        _id: 1,
+        stat: "$1.07 billion",
+        description:
+          "Created the model and prepared the rating agency tape, credit and memo.",
+        icon: "fi-ts-building",
+        url: "credit-and-memo",
+      },
+      {
+        _id: 2,
+        stat: "$560 million",
+        description:
+          "Underwrote 430-asset, small balance multifamily portfolio for a multinational.",
+        icon: "fi-ts-stats",
+        url: "small-balance-multifamily-portfolio",
+      },
+    ],
   },
 ];
