@@ -91,9 +91,31 @@ const Header = () => {
               );
             })}
           </ul>
-          <button className="text-lambda flex cursor-pointer items-center gap-3 pb-[9px]">
+          <button className="text-lambda group relative flex cursor-pointer items-center gap-3 pb-[9px]">
             <Icon className="fi-rr-world" /> Worldwide{" "}
-            <Icon className="fi-rr-angle-small-down" />
+            <Icon className="fi-rr-angle-small-down transition-all duration-300 ease-in-out group-hover:rotate-180" />
+            <div className="pointer-events-none absolute top-full left-0 w-full rounded-b-md bg-white p-3 opacity-0 shadow-lg transition-all duration-300 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
+              <ul>
+                {worldWide.map(({ _id, label, route }) => {
+                  return (
+                    <li key={_id}>
+                      <Link
+                        href={route}
+                        className="mb-2 flex items-center gap-3"
+                      >
+                        <Image
+                          src={`/icons/${label.toLowerCase()}.svg`}
+                          alt={label}
+                          width={20}
+                          height={20}
+                        />
+                        {label}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </button>
         </div>
       </div>
@@ -102,6 +124,19 @@ const Header = () => {
 };
 
 export default Header;
+
+const worldWide = [
+  {
+    _id: 1,
+    label: "India",
+    route: "/",
+  },
+  {
+    _id: 2,
+    label: "USA",
+    route: "/",
+  },
+];
 
 const data = [
   {
