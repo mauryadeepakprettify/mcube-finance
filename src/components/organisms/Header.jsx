@@ -56,7 +56,7 @@ const Header = () => {
                   {subMenu && (
                     <ul className="border-lambda/30 absolute top-full left-0 grid w-[900px] origin-top transform-[perspective(2000px)_translate3d(0,0,50px)_rotateX(-90deg)_scale3d(0.86,0.75,1)_translateY(0px)] grid-cols-3 gap-4 rounded-b-lg border-t bg-white p-3 shadow-lg transition-all duration-500 ease-in-out group-hover:transform-[perspective(2000px)_translate3d(0,0,0)_rotateX(0deg)_scale3d(1,1,1)_translateY(0px)]">
                       {subMenu.map(
-                        ({ _id, label, description, icon, route }) => {
+                        ({ _id, label, description, img, route }) => {
                           return (
                             <li
                               className="hover:bg-beta rounded-sm p-5 transition-all duration-300 ease-in-out"
@@ -64,10 +64,13 @@ const Header = () => {
                             >
                               <Link
                                 href={`/what-we-do${route}`}
-                                className="flex gap-4"
+                                className="flex items-start gap-4"
                               >
-                                <Icon
-                                  className={`${icon} text-primary text-2xl transition-all duration-300 ease-in-out`}
+                                <Image
+                                  src={`/icons/${img}`}
+                                  alt={label}
+                                  width={30}
+                                  height={30}
                                 />
                                 <div>
                                   <p className="mb-1 text-[18px] leading-[22px] transition-all duration-300 ease-in-out">
@@ -115,35 +118,35 @@ const data = [
         _id: 1,
         label: "Lenders / Financial Institutions",
         description: "Expert guidance for lenders and financial institutions.",
-        icon: "fi-rr-handshake",
+        img: "handshake.svg",
         route: "/leaders-financial-institutions",
       },
       {
         _id: 2,
         label: "Investors",
         description: "Strategic insights enabling investors to make informed.",
-        icon: "fi-rr-building",
+        img: "hospital.svg",
         route: "/investors",
       },
       {
         _id: 3,
         label: "Brokers",
         description: "Strategic insights enabling investors to make informed.",
-        icon: "fi-rr-building",
+        img: "hospital.svg",
         route: "/investors",
       },
       {
         _id: 4,
         label: "Investors",
         description: "Strategic insights enabling investors to make informed.",
-        icon: "fi-rr-building",
+        img: "hospital.svg",
         route: "/investors",
       },
       {
         _id: 5,
         label: "Brokers",
         description: "Strategic insights enabling investors to make informed.",
-        icon: "fi-rr-building",
+        img: "hospital.svg",
         route: "/investors",
       },
     ],

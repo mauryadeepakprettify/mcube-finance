@@ -4,7 +4,7 @@ const MoreServices = () => {
   return (
     <section className="bg-beta py-8 lg:py-16">
       <div className="container">
-        <CommonSlider data={data} />
+        <CommonSlider data={data} title="More Services" />
       </div>
     </section>
   );
@@ -12,15 +12,13 @@ const MoreServices = () => {
 
 export default MoreServices;
 
-const data = {
-  title: "More Services",
-  services: [
+const data = [
     {
       _id: 1,
       label: "Lenders / Financial Institutions",
       description:
         "Expert guidance for lenders and financial institutions across commercial real estate transactions.",
-      icon: "fi-rr-handshake",
+      img: "handshake.svg",
       route: "/leaders-financial-institutions",
     },
     {
@@ -28,7 +26,7 @@ const data = {
       label: "Investors",
       description:
         "Strategic insights enabling investors to make informed and confident real estate decisions.",
-      icon: "fi-rr-building",
+      img: "hospital.svg",
       route: "/investors",
     },
     {
@@ -36,7 +34,7 @@ const data = {
       label: "Brokers",
       description:
         "Strategic insights enabling investors to make informed and confident real estate decisions.",
-      icon: "fi-rr-building",
+      img: "hospital.svg",
       route: "/investors",
     },
     {
@@ -44,7 +42,7 @@ const data = {
       label: "Investors",
       description:
         "Strategic insights enabling investors to make informed and confident real estate decisions.",
-      icon: "fi-rr-building",
+      img: "hospital.svg",
       route: "/investors",
     },
     {
@@ -52,7 +50,7 @@ const data = {
       label: "Brokers",
       description:
         "Strategic insights enabling investors to make informed and confident real estate decisions.",
-      icon: "fi-rr-building",
+      img: "hospital.svg",
       route: "/investors",
     },
     {
@@ -60,7 +58,7 @@ const data = {
       label: "Brokers",
       description:
         "Strategic insights enabling investors to make informed and confident real estate decisions.",
-      icon: "fi-rr-building",
+      img: "hospital.svg",
       route: "/investors",
     },
     {
@@ -68,8 +66,7 @@ const data = {
       label: "Brokers",
       description:
         "Strategic insights enabling investors to make informed and confident real estate decisions.",
-      icon: "fi-rr-building",
+      img: "hospital.svg",
       route: "/investors",
     },
-  ],
-};
+  ]

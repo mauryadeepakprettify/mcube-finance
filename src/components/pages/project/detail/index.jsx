@@ -1,5 +1,15 @@
+import Form from "@/components/organisms/Form";
+import Content from "./Content";
+import MoreProjects from "./MoreProjects";
+
 const ProjectDetail = () => {
-  return <></>;
+  return (
+    <>
+      <Content />
+      <Form />
+      <MoreProjects />
+    </>
+  );
 };
 
 export default ProjectDetail;

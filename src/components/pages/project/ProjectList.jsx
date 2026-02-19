@@ -1,10 +1,11 @@
 "use client";
 
 import Icon from "@/components/atoms/Icon";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const ProjectCategory = () => {
+const ProjectList = () => {
   const [active, setActive] = useState(0);
 
   return (
@@ -27,15 +28,21 @@ const ProjectCategory = () => {
         <div className="my-10 grid gap-10 md:grid-cols-2">
           <div className="grid grid-cols-2 gap-5">
             {data?.[active]?.projects?.map(
-              ({ _id, stat, description, icon }) => {
+              ({ _id, stat, description, img }) => {
                 return (
                   <Link
-                    href="# "
+                    href={`/project/${data?.[active]?._id}`}
                     key={_id}
                     className="bg-beta h-[193px] group hover:bg-primary transition-all duration-300 ease-in-out  relative overflow-hidden border border-[#B7B7B7] p-5 pb-7"
                   >
                     <div className="max-w-[85%] relative">
-                      <Icon className={`text-primary transition-all duration-300 ease-in-out group-hover:text-white group-hover:text-8xl text-4xl ${icon}`} />
+                      <Image
+                        src={`/icons/projects/${img}`}
+                        alt={stat}
+                        width={40}
+                        height={40}
+                        className="group-hover:filter group-hover:invert group-hover:brightness-0 transition-all duration-300 ease-in-out group-hover:w-[110px]"
+                      />
                       <h6 className="mt-3 transition-all duration-300 ease-in-out group-hover:text-white text-lg leading-[22px]">{stat}</h6>
                       <p className="text-lambda group-hover:-bottom-full group-hover:absolute group-hover:opacity-0 transition-all duration-300 ease-in-out group-hover:text-white/80 mt-1 text-sm leading-[20px]">
                         {description}
@@ -64,11 +71,11 @@ const ProjectCategory = () => {
   );
 };
 
-export default ProjectCategory;
+export default ProjectList;
 
 const data = [
   {
-    _id: 1,
+    _id: "cmbs-balance-sheet-underwriting",
     title: "CMBS/Balance Sheet Underwriting",
     projects: [
       {
@@ -76,53 +83,47 @@ const data = [
         stat: "$1.07 billion",
         description:
           "Created the model and prepared the rating agency tape, credit and memo.",
-        icon: "fi-ts-building",
-        url: "credit-and-memo",
+        img: "building.svg",
       },
       {
         _id: 2,
         stat: "$560 million",
         description:
           "Underwrote 430-asset, small balance multifamily portfolio for a multinational.",
-        icon: "fi-ts-stats",
-        url: "small-balance-multifamily-portfolio",
+        img: "stat.svg",
       },
       {
         _id: 3,
         stat: "$230 million",
         description:
           "Delivered full underwriting services for single family rental securitization.",
-        icon: "fi-ts-sack-dollar",
-        url: "single-family-rental-securitization",
+        img: "dollar.svg",
       },
       {
         _id: 4,
         stat: "$225 million",
         description:
           "Performed underwriting and prepared credit memo for 50-asset hotel portfolio.",
-        icon: "fi-ts-wallet",
-        url: "hotel-portfolio",
+        img: "wallet.svg",
       },
       {
         _id: 5,
         stat: "45 million",
         description:
           "Underwrote a first mortgage with mezzanine financing secured by $45 million",
-        icon: "fi-tr-layer-plus",
-        url: "first-mortgage-with-mezzanine-financing",
+        img: "layer.svg",
       },
       {
         _id: 6,
         stat: "$35 million",
         description:
           "Underwrote bridge loans including a 13-property industrial portfolio and 2-property.",
-        icon: "fi-ts-road-barrier",
-        url: "bridge-loans",
+        img: "bridge.svg",
       },
     ],
   },
   {
-    _id: 2,
+    _id: "sizings-lease-abstraction",
     title: "Sizings/Lease Abstraction",
     projects: [
       {
@@ -131,7 +132,6 @@ const data = [
         description:
           "Created the model and prepared the rating agency tape, credit and memo.",
         icon: "fi-ts-building",
-        url: "credit-and-memo",
       },
       {
         _id: 2,
@@ -139,12 +139,11 @@ const data = [
         description:
           "Underwrote 430-asset, small balance multifamily portfolio for a multinational.",
         icon: "fi-ts-stats",
-        url: "small-balance-multifamily-portfolio",
       },
     ],
   },
   {
-    _id: 3,
+    _id: "asset-management-loan-workouts",
     title: "Asset management/Loan Workouts",
     projects: [
       {
@@ -153,7 +152,6 @@ const data = [
         description:
           "Delivered full underwriting services for single family rental securitization.",
         icon: "fi-ts-sack-dollar",
-        url: "single-family-rental-securitization",
       },
       {
         _id: 4,
@@ -161,12 +159,11 @@ const data = [
         description:
           "Performed underwriting and prepared credit memo for 50-asset hotel portfolio.",
         icon: "fi-ts-wallet",
-        url: "hotel-portfolio",
       },
     ],
   },
   {
-    _id: 4,
+    _id: "agency-underwriting",
     title: "Agency Underwriting",
     projects: [
       {
@@ -175,7 +172,6 @@ const data = [
         description:
           "Created the model and prepared the rating agency tape, credit and memo.",
         icon: "fi-ts-building",
-        url: "credit-and-memo",
       },
       {
         _id: 2,
@@ -183,7 +179,6 @@ const data = [
         description:
           "Underwrote 430-asset, small balance multifamily portfolio for a multinational.",
         icon: "fi-ts-stats",
-        url: "small-balance-multifamily-portfolio",
       },
     ],
   },
