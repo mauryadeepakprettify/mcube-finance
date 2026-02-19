@@ -26,7 +26,7 @@ const Hero = ({ img, vid, title, description, route, routeLabel }) => {
         ></video>
       )}
       <div
-        className={`absolute bottom-[6%] left-1/2 -translate-x-1/2 transform p-5 md:bottom-[8%] ${route ? "top-1/2 bottom-auto -translate-y-1/2" : ""}`}
+        className={`absolute w-full lg:w-auto bottom-[6%] left-1/2 -translate-x-1/2 transform p-5 md:bottom-[8%] ${route ? "top-1/2 bottom-auto -translate-y-1/2" : ""}`}
       >
         <h1 className="mb-2 text-center text-[32px] leading-[36px] text-white max-[375px]:text-[28px] max-[375px]:leading-[32px] lg:text-5xl lg:leading-[55px]">
           {title}

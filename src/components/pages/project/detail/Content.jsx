@@ -5,9 +5,9 @@ const Content = () => {
   const { _id, title, img, description, features } = data;
 
   return (
-    <section className="pb-8 lg:pb-16">
-      <div className="container grid grid-cols-2 gap-14">
-        <figure className="sticky top-[109px] h-fit before:absolute before:inset-0 before:bg-[linear-gradient(270deg,rgba(0,0,0,0)18.75%,rgba(0,0,0,0.7)79.92%)]">
+    <section className="pt-8 pb-8 lg:pt-0 lg:pb-16">
+      <div className="container grid gap-0 lg:grid-cols-2 lg:gap-14">
+        <figure className="relative h-fit before:absolute before:inset-0 before:h-full before:w-full before:bg-[linear-gradient(270deg,rgba(0,0,0,0)18.75%,rgba(0,0,0,0.7)79.92%)] lg:sticky lg:top-[109px]">
           <Image
             className="h-auto w-full object-cover"
             src={`/images/banner/${img}`}
@@ -15,23 +15,28 @@ const Content = () => {
             width={640}
             height={613}
           />
-          <div className="absolute top-1/2 right-12 left-12 -translate-y-1/2">
-            <p className="mb-4 leading-[24px] tracking-widest text-white/80 uppercase">
+          <div className="absolute top-1/2 right-6 left-6 -translate-y-1/2 md:right-12 md:left-12">
+            <p className="mb-3 text-sm tracking-widest text-white/80 uppercase md:mb-4 md:text-base md:leading-[24px]">
               Project Showcase
             </p>
-            <h2 className="text-[40px] leading-[46px] text-white">{title}</h2>
+            <h2 className="text-[26px] leading-[32px] text-white md:text-[40px] md:leading-[46px]">
+              {title}
+            </h2>
           </div>
         </figure>
-        <div className="pt-10">
+        <div className="pt-6 lg:pt-10">
           <p className="text-lambda mb-8 leading-[24px]">{description}</p>
           <ul className="">
             {features?.map(({ _id, title, description }, idx) => {
               return (
-                <li key={_id} className="pl-10 ml-5 pb-6 border-l border-primary relative">
-                    <span className="w-[34px] h-[34px] p-4 border border-primary bg-white absolute -left-[18px] top-0 rounded-full flex items-center justify-center">
-                        <Icon className="fi-ts-arrow-small-left  text-primary text-2xl rotate-[225deg]" />
-                    </span>
-                  <h6 className="text-lg mb-2 leading-[26px]">{title}</h6>
+                <li
+                  key={_id}
+                  className="border-primary relative ml-5 border-l pb-6 pl-10"
+                >
+                  <span className="border-primary absolute top-0 -left-[18px] flex h-[34px] w-[34px] items-center justify-center rounded-full border bg-white p-4">
+                    <Icon className="fi-ts-arrow-small-left text-primary rotate-[225deg] text-2xl" />
+                  </span>
+                  <h6 className="mb-2 text-lg leading-[26px]">{title}</h6>
                   <p className="text-lambda leading-[24px]">{description}</p>
                 </li>
               );

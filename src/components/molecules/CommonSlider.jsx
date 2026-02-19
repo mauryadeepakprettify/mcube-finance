@@ -35,7 +35,7 @@ const CommonSlider = ({
   return (
     <div>
       <div className="flex items-center justify-between gap-4 md:gap-6 lg:gap-10">
-        <h2 className="text-[32px] leading-[36px] max-[375px]:text-[28px] max-[375px]:leading-[32px] lg:text-5xl lg:leading-[55px]">
+        <h2 className="text-[28px] leading-[32px] md:text-[32px] md:leading-[36px] max-[375px]:text-[28px] max-[375px]:leading-[32px] lg:text-5xl lg:leading-[55px]">
           {title}
         </h2>
         <hr className="h-px flex-1 border-none bg-black/20" />
@@ -61,7 +61,7 @@ const CommonSlider = ({
           modules={[Navigation]}
         >
           {data?.map((item) => (
-            <SwiperSlide className="" key={item._id}>
+            <SwiperSlide className="flex! h-auto!" key={item._id}>
               {title?.includes("Services") ? (
                 <ServiceCard {...item} className="bg-white" />
               ) : (

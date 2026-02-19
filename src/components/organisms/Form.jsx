@@ -38,10 +38,13 @@ const Form = () => {
   return (
     <section className="bg-primary py-8 lg:py-16">
       <div className="container max-w-2xl!">
-        <h2 className="mb-6 lg:mb-10 text-center text-[28px] leading-[36px] md:text-[36px] md:leading-[48px] lg:text-5xl lg:leading-[54px] text-white">
+        <h2 className="mb-6 text-center text-[28px] leading-[36px] text-white md:text-[36px] md:leading-[48px] lg:mb-10 lg:text-5xl lg:leading-[54px]">
           Let’s Discuss Your Real Estate Needs
         </h2>
-        <form onSubmit={handleSubmit} className="grid gap-8 md:grid-cols-2">
+        <form
+          onSubmit={handleSubmit}
+          className="grid gap-4 px-4 md:grid-cols-2 md:gap-8"
+        >
           <Input
             label="Name*"
             name="name"

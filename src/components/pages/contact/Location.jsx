@@ -14,10 +14,10 @@ const Location = () => {
         alt="Vector"
         width={180}
         height={150}
-        className="absolute bottom-0 left-0"
+        className="absolute lg:block hidden bottom-0 left-0"
       />
-      <div className="grid grid-cols-5 gap-6 lg:gap-10 xl:gap-16">
-        <div className="col-span-2 flex flex-col justify-center p-22">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-10 xl:gap-16">
+        <div className="lg:col-span-2 order-2 lg:order-1 flex flex-col justify-center pt-10 px-4 md:px-6 lg:p-12 xl:p-22">
           <ul className="mb-10 flex gap-10">
             {data?.map((item, index) => {
               const { _id, title } = item;
@@ -26,7 +26,7 @@ const Location = () => {
                 <li
                   key={_id}
                   onClick={() => setActiveTab(index)}
-                  className={`relative cursor-pointer pb-4 text-2xl leading-[28px] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-black before:transition-all before:duration-300 before:ease-in-out hover:before:w-full ${isActive ? "text-black before:w-full" : "text-black/30"}`}
+                  className={`relative cursor-pointer pb-4 text-xl leading-[24px] xl:text-2xl xl:leading-[28px] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-black before:transition-all before:duration-300 before:ease-in-out hover:before:w-full ${isActive ? "text-black before:w-full" : "text-black/30"}`}
                 >
                   {title}
                 </li>
@@ -71,7 +71,7 @@ const Location = () => {
             );
           })}
         </div>
-        <div className="relative col-span-3">
+        <div className="relative lg:col-span-3 order-1 lg:order-2">
           {data?.map((item, index) => {
             const { _id, city } = item;
             const isActive = activeTab === index;

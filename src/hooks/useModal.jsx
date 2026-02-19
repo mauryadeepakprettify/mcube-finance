@@ -8,14 +8,12 @@ export const useModal = () => {
   const openModal = (type, data = null) => {
     dispatch(setIsModal(type));
     dispatch(setModalData(data));
-    document.body.style.overflow = "hidden";
-    document.body.style.marginRight = "8px";
+    document.body.classList.add("hide-scroll");
   };
 
   const closeModal = () => {
     dispatch(setIsModal(null));
-    document.body.style.overflow = "auto";
-    document.body.style.marginRight = "0";
+    document.body.classList.remove("hide-scroll");
   };
 
   return { openModal, closeModal };

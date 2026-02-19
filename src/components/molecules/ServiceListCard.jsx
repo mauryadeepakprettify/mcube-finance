@@ -17,7 +17,7 @@ const ServiceListCard = ({ data, index = 0, activeIndex, setActiveIndex }) => {
   };
 
   return (
-    <div className="flex flex-col gap-5 lg:gap-18 border-black/20 py-12 not-last:border-b lg:flex-row">
+    <div className="flex flex-col gap-5 lg:gap-18 border-black/20 py-8 lg:py-12 first:pt-0 not-last:border-b lg:flex-row">
       <figure className="flex-3">
         <Image
           className="h-full w-full object-cover transition-all duration-300 ease-in-out"
@@ -50,7 +50,7 @@ const ServiceListCard = ({ data, index = 0, activeIndex, setActiveIndex }) => {
         </Link>
 
         <div
-          className={`grid transition-all duration-300 ease-in-out ${isActive ? "my-5 md:my-7 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"} `}
+          className={`grid transition-all duration-300 ease-in-out ${isActive ? "my-5 md:my-7 grid-rows-[1fr] pointer-events-auto opacity-100" : "grid-rows-[0fr] absolute pointer-events-none opacity-0"} `}
         >
           <ul className="marker:text-primary *:text-lambda ml-6 grid list-disc grid-cols-2 gap-8 md:gap-6 *:text-base *:leading-[22px] md:text-lg md:leading-[26px] marker:text-2xl">
             {features?.map((feature, index) => (

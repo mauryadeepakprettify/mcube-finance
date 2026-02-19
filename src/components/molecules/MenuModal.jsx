@@ -108,8 +108,8 @@ const data = [
   },
   {
     _id: 3,
-    label: "Insights",
-    route: "/insights",
+    label: "Projects",
+    route: "/project",
   },
   {
     _id: 4,
