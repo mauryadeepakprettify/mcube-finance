@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Vision = () => {
   return (
-    <section className="relative h-[calc(60vh-76px)] before:absolute before:inset-0 before:h-full before:w-full before:bg-[linear-gradient(270deg,rgba(0,0,0,0)_38.95%,rgba(0,0,0,0.7)_77.81%)] before:content-[''] md:h-[calc(50vh-76px)] lg:h-[calc(50vh-109px)] xl:h-[calc(100vh-109px)]">
+    <section className="relative h-[373px] md:h-auto before:absolute before:inset-0 before:h-full before:w-full before:bg-[linear-gradient(270deg,rgba(0,0,0,0)_38.95%,rgba(0,0,0,0.7)_77.81%)] before:content-[''] ">
       <Image
         className="h-full w-full object-cover"
         src="/images/banner/skyline.svg"

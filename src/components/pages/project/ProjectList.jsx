@@ -11,13 +11,13 @@ const ProjectList = () => {
   return (
     <section className="pb-8">
       <div className="container">
-        <ul className="sticky top-[109px] z-10 flex gap-20 overflow-x-auto border-b border-[#D9D9D9] bg-white pt-8 pb-7 *:text-xl *:leading-[26px]">
+        <ul className="sticky top-[58px] z-10 flex gap-10 overflow-x-auto border-b border-[#D9D9D9] bg-white pt-5 pb-6 [scrollbar-width:none] md:gap-20 md:pt-8 md:pb-7 lg:top-[109px] [--webkit-scrollbar]:hidden">
           {data?.map(({ _id, title }, idx) => {
             return (
               <li
                 key={_id}
                 onClick={() => setActive(idx)}
-                className={`${active === idx ? "before:w-full" : "before:w-0"} before:bg-primary relative cursor-pointer before:absolute before:-bottom-7 before:left-0 before:h-[2px] before:transition-all before:duration-300 before:ease-in-out hover:before:w-full`}
+                className={`${active === idx ? "before:w-full" : "before:w-0"} before:bg-primary relative min-w-[150px] cursor-pointer text-base leading-[22px] before:absolute before:-bottom-6 before:left-0 before:h-[2px] before:transition-all before:duration-300 before:ease-in-out hover:before:w-full md:text-xl md:leading-[26px] before:md:-bottom-7`}
               >
                 {title}
               </li>
@@ -25,38 +25,40 @@ const ProjectList = () => {
           })}
         </ul>
 
-        <div className="my-10 grid gap-10 md:grid-cols-2">
-          <div className="grid grid-cols-2 gap-5">
+        <div className="my-10 grid gap-6 md:grid-cols-2 md:gap-10">
+          <div className="order-2 grid grid-cols-1 gap-5 md:order-1 lg:grid-cols-2">
             {data?.[active]?.projects?.map(
               ({ _id, stat, description, img }) => {
                 return (
                   <Link
                     href={`/project/${data?.[active]?._id}`}
                     key={_id}
-                    className="bg-beta h-[193px] group hover:bg-primary transition-all duration-300 ease-in-out  relative overflow-hidden border border-[#B7B7B7] p-5 pb-7"
+                    className="bg-beta group hover:bg-primary relative h-[193px] overflow-hidden border border-[#B7B7B7] p-5 pb-7 transition-all duration-300 ease-in-out"
                   >
-                    <div className="max-w-[85%] relative">
+                    <div className="relative max-w-[85%]">
                       <Image
                         src={`/icons/projects/${img}`}
                         alt={stat}
                         width={40}
                         height={40}
-                        className="group-hover:filter group-hover:invert group-hover:brightness-0 transition-all duration-300 ease-in-out group-hover:w-[110px]"
+                        className="transition-all duration-300 ease-in-out group-hover:w-[110px] group-hover:brightness-0 group-hover:invert group-hover:filter"
                       />
-                      <h6 className="mt-3 transition-all duration-300 ease-in-out group-hover:text-white text-lg leading-[22px]">{stat}</h6>
-                      <p className="text-lambda group-hover:-bottom-full group-hover:absolute group-hover:opacity-0 transition-all duration-300 ease-in-out group-hover:text-white/80 mt-1 text-sm leading-[20px]">
+                      <h6 className="mt-3 text-lg leading-[22px] transition-all duration-300 ease-in-out group-hover:text-white">
+                        {stat}
+                      </h6>
+                      <p className="text-lambda mt-1 text-sm leading-[20px] transition-all duration-300 ease-in-out group-hover:absolute group-hover:-bottom-full group-hover:text-white/80 group-hover:opacity-0">
                         {description}
                       </p>
                     </div>
-                    <span className="absolute right-6 group-hover:translate-x-1 transition-all duration-300 ease-in-out  bottom-5">
-                      <Icon className="fi-rr-arrow-right text-primary transition-all duration-300 ease-in-out  group-hover:text-white text-lg" />
+                    <span className="absolute right-6 bottom-5 transition-all duration-300 ease-in-out group-hover:translate-x-1">
+                      <Icon className="fi-rr-arrow-right text-primary text-lg transition-all duration-300 ease-in-out group-hover:text-white" />
                     </span>
                   </Link>
                 );
               },
             )}
           </div>
-          <div className="sticky top-[250px] h-[408px] w-full">
+          <div className="order-1 h-[220px] w-full md:sticky md:top-[250px] md:order-2 md:h-[408px]">
             <video
               src="/video/conferance.mp4"
               autoPlay

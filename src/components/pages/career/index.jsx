@@ -8,7 +8,7 @@ const Career = () => {
     <>
       <Hero
         img="career"
-        title="Career"
+        title="Careers"
         description="Be part of a collaborative environment that values learning and impact."
       />
       <Info />
