@@ -7,7 +7,7 @@ const VideoModal = () => {
 
   return (
     <div
-      className={`z-40 fixed top-1/2 left-1/2 aspect-video max-w-[700px] -translate-x-1/2 -translate-y-1/2  transition-all duration-500 ease-in-out ${isModal === "video" ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-0 opacity-0"}`}
+      className={`fixed top-1/2 left-1/2 z-40 aspect-video max-w-[700px] -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ease-in-out ${isModal === "video" ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-0 opacity-0"}`}
     >
       <video
         className="h-full w-full border-2 border-white object-cover"

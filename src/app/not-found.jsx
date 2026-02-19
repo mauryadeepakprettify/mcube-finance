@@ -1,4 +1,3 @@
-
 import Hero from "@/components/organisms/Hero";
 
 const NotFound = () => {
@@ -11,6 +10,6 @@ const NotFound = () => {
       routeLabel="Back to Home"
     />
   );
-}; 
+};
 
 export default NotFound;

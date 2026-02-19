@@ -9,8 +9,10 @@ const OurTeam = () => {
         {data?.map(({ _id, country, team }) => {
           return (
             <div className="not-last:mb-12" key={_id}>
-              <h2 className=" text-center  text-[32px] leading-[36px] max-[375px]:text-[28px] max-[375px]:leading-[32px] md:text-left lg:text-5xl lg:leading-[55px]">Management Team - {country}</h2>
-              <div className=" mt-8 lg:mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <h2 className="text-center text-[32px] leading-[36px] max-[375px]:text-[28px] max-[375px]:leading-[32px] md:text-left lg:text-5xl lg:leading-[55px]">
+                Management Team - {country}
+              </h2>
+              <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-12 lg:grid-cols-3">
                 {team?.map((item) => (
                   <TeamCard key={item?._id} {...item} />
                 ))}

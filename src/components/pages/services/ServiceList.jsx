@@ -8,7 +8,13 @@ const ServiceList = () => {
     <section className="py-8 lg:py-16">
       <div className="container">
         {data?.map((item, index) => (
-          <ServiceListCard key={item._id} data={item} index={index} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+          <ServiceListCard
+            key={item._id}
+            data={item}
+            index={index}
+            activeIndex={activeIndex}
+            setActiveIndex={setActiveIndex}
+          />
         ))}
       </div>
     </section>

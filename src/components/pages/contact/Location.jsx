@@ -14,10 +14,10 @@ const Location = () => {
         alt="Vector"
         width={180}
         height={150}
-        className="absolute lg:block hidden bottom-0 left-0"
+        className="absolute bottom-0 left-0 hidden lg:block"
       />
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-10 xl:gap-16">
-        <div className="lg:col-span-2 order-2 lg:order-1 flex flex-col justify-center pt-10 px-4 md:px-6 lg:p-12 xl:p-22">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-5 lg:gap-10 xl:gap-16">
+        <div className="order-2 flex flex-col justify-center px-4 pt-10 md:px-6 lg:order-1 lg:col-span-2 lg:p-12 xl:p-22">
           <ul className="mb-10 flex gap-10">
             {data?.map((item, index) => {
               const { _id, title } = item;
@@ -26,7 +26,7 @@ const Location = () => {
                 <li
                   key={_id}
                   onClick={() => setActiveTab(index)}
-                  className={`relative cursor-pointer pb-4 text-xl leading-[24px] xl:text-2xl xl:leading-[28px] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-black before:transition-all before:duration-300 before:ease-in-out hover:before:w-full ${isActive ? "text-black before:w-full" : "text-black/30"}`}
+                  className={`relative cursor-pointer pb-4 text-xl leading-[24px] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-black before:transition-all before:duration-300 before:ease-in-out hover:before:w-full xl:text-2xl xl:leading-[28px] ${isActive ? "text-black before:w-full" : "text-black/30"}`}
                 >
                   {title}
                 </li>
@@ -71,7 +71,7 @@ const Location = () => {
             );
           })}
         </div>
-        <div className="relative lg:col-span-3 order-1 lg:order-2">
+        <div className="relative order-1 lg:order-2 lg:col-span-3">
           {data?.map((item, index) => {
             const { _id, city } = item;
             const isActive = activeTab === index;
@@ -82,7 +82,7 @@ const Location = () => {
                 className={`${index === 0 ? "top-[36%] left-[30%] " : "top-[53%] right-[17%] "} absolute`}
               >
                 <Icon
-                  className={` ${isActive ? "fi-ss-marker text-[26px]" : "fi-rr-dot-circle animate-pulse text-[20px]"} transition-all duration-300 ease-in-out text-primary cursor-pointer`}
+                  className={` ${isActive ? "fi-ss-marker text-[26px]" : "fi-rr-dot-circle animate-pulse text-[20px]"} text-primary cursor-pointer transition-all duration-300 ease-in-out`}
                 />
                 <span
                   className={`bg-primary absolute -bottom-12 left-1/2 -translate-x-1/2 rounded-[5px] px-4 py-3 text-nowrap text-white transition-all duration-300 ease-in-out ${isActive ? "opacity-100" : "opacity-0"}`}

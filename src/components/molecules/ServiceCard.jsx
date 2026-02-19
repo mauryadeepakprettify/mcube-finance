@@ -12,7 +12,13 @@ const ServiceCard = ({ img, label, description, route, className = "" }) => {
           <h3 className="text-xl leading-[26px] lg:text-2xl lg:leading-[30px]">
             {label}
           </h3>{" "}
-          <Image className="w-[38px] h-[38px] lg:w-[45px] lg:h-[45px]" width={45} height={45} src={`/icons/${img}`} alt={label} />
+          <Image
+            className="h-[38px] w-[38px] lg:h-[45px] lg:w-[45px]"
+            width={45}
+            height={45}
+            src={`/icons/${img}`}
+            alt={label}
+          />
         </div>
         <p className="text-lambda/80 mb-4 max-w-[300px] text-base leading-[22px]">
           {description}

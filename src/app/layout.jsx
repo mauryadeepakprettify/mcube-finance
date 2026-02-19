@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${celeste.variable} ${partner.variable}`}>
-        <Toaster position="top-right"  />
+        <Toaster position="top-right" />
         <ReduxProvider>
           <MainTemplate>{children}</MainTemplate>
         </ReduxProvider>

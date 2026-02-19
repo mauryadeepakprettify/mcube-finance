@@ -53,7 +53,11 @@ const Openings = () => {
           </div>
           <div className="flex-5">
             {data.map((item) => (
-              <OpeningCard key={item._id} applicationRef={applicationRef} data={item} />
+              <OpeningCard
+                key={item._id}
+                applicationRef={applicationRef}
+                data={item}
+              />
             ))}
           </div>
         </div>

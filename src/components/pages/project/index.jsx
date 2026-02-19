@@ -6,7 +6,7 @@ const Project = () => {
     <>
       <Stat />
       <ProjectList />
-    </> 
+    </>
   );
 };
 

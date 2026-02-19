@@ -9,8 +9,8 @@ const WhoWeAre = () => {
 
   return (
     <section className="py-8 lg:py-16">
-      <div className="container flex max-w-6xl! flex-col gap-6 md:gap-0 md:flex-row lg:gap-10 xl:gap-28">
-        <div className="flex md:w-[400px] shrink-0 items-center justify-center">
+      <div className="container flex max-w-6xl! flex-col gap-6 md:flex-row md:gap-0 lg:gap-10 xl:gap-28">
+        <div className="flex shrink-0 items-center justify-center md:w-[400px]">
           <Image
             src="/images/banner/york.svg"
             alt="Who We Are"
@@ -29,7 +29,7 @@ const WhoWeAre = () => {
             }}
           />
         </div>
-        <div className="flex md:flex-1 flex-col justify-center">
+        <div className="flex flex-col justify-center md:flex-1">
           <h2 className="mb-3 text-center text-[28px] leading-[28px] md:text-left lg:mb-5 lg:text-5xl lg:leading-[48px]">
             {title}
           </h2>

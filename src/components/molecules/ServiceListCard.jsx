@@ -17,7 +17,7 @@ const ServiceListCard = ({ data, index = 0, activeIndex, setActiveIndex }) => {
   };
 
   return (
-    <div className="flex flex-col gap-5 lg:gap-18 border-black/20 py-8 lg:py-12 first:pt-0 not-last:border-b lg:flex-row">
+    <div className="flex flex-col gap-5 border-black/20 py-8 not-last:border-b first:pt-0 lg:flex-row lg:gap-18 lg:py-12">
       <figure className="flex-3">
         <Image
           className="h-full w-full object-cover transition-all duration-300 ease-in-out"
@@ -30,7 +30,7 @@ const ServiceListCard = ({ data, index = 0, activeIndex, setActiveIndex }) => {
       <div className="flex-4">
         <h3
           onClick={handleActiveIndex}
-          className="relative mb-3 md:mb-5 cursor-pointer text-2xl md:text-3xl"
+          className="relative mb-3 cursor-pointer text-2xl md:mb-5 md:text-3xl"
         >
           {title}
           <button
@@ -39,7 +39,7 @@ const ServiceListCard = ({ data, index = 0, activeIndex, setActiveIndex }) => {
             <Icon className="fi-rr-angle-up text-lambda text-xl" />
           </button>
         </h3>
-        <p className="text-lambda mb-4 md:mb-7 max-w-[90%] text-lg leading-[22px] md:text-xl md:leading-[26px]">
+        <p className="text-lambda mb-4 max-w-[90%] text-lg leading-[22px] md:mb-7 md:text-xl md:leading-[26px]">
           {description}
         </p>
         <Link
@@ -50,9 +50,9 @@ const ServiceListCard = ({ data, index = 0, activeIndex, setActiveIndex }) => {
         </Link>
 
         <div
-          className={`grid transition-all duration-300 ease-in-out ${isActive ? "my-5 md:my-7 grid-rows-[1fr] pointer-events-auto opacity-100" : "grid-rows-[0fr] absolute pointer-events-none opacity-0"} `}
+          className={`grid transition-all duration-300 ease-in-out ${isActive ? "pointer-events-auto my-5 grid-rows-[1fr] opacity-100 md:my-7" : "pointer-events-none absolute grid-rows-[0fr] opacity-0"} `}
         >
-          <ul className="marker:text-primary *:text-lambda ml-6 grid list-disc grid-cols-2 gap-8 md:gap-6 *:text-base *:leading-[22px] md:text-lg md:leading-[26px] marker:text-2xl">
+          <ul className="marker:text-primary *:text-lambda ml-6 grid list-disc grid-cols-2 gap-8 *:text-base *:leading-[22px] marker:text-2xl md:gap-6 md:text-lg md:leading-[26px]">
             {features?.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}

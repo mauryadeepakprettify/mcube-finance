@@ -38,13 +38,16 @@ const MCubeAdvantage = () => {
         </div>
         <div className="mt-8 grid grid-cols-1 gap-6 md:mt-12 md:grid-cols-2 lg:gap-28">
           <div className="order-2 flex flex-col justify-center md:order-1">
-            <h3 className=" mb-3 md:mb-4 text-center text-3xl md:text-left md:text-4xl">
+            <h3 className="mb-3 text-center text-3xl md:mb-4 md:text-left md:text-4xl">
               {data[activeTab].title}
             </h3>
-            <p className="text-lambda mb-6 md:mb-8 text-base md:text-left text-center leading-[24px]">
+            <p className="text-lambda mb-6 text-center text-base leading-[24px] md:mb-8 md:text-left">
               {data[activeTab].description}
             </p>
-            <Button onClick={() => openModal("enquire")} className="w-fit md:mx-0 mx-auto">
+            <Button
+              onClick={() => openModal("enquire")}
+              className="mx-auto w-fit md:mx-0"
+            >
               Enquire Now <Icon className="fi-rr-angle-right" />
             </Button>
           </div>

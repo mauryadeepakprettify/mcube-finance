@@ -4,17 +4,17 @@ import Button from "../atoms/Button";
 import Icon from "../atoms/Icon";
 
 const OpeningCard = ({ data, applicationRef }) => {
-    const { _id, opening, location, type, details } = data;
+  const { _id, opening, location, type, details } = data;
 
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    const handleApplyNow = (e) => {
-      e.stopPropagation();
-      applicationRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    };
+  const handleApplyNow = (e) => {
+    e.stopPropagation();
+    applicationRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   return (
     <div className="border-t border-[#EFEFEF]">
@@ -31,11 +31,7 @@ const OpeningCard = ({ data, applicationRef }) => {
         </div>
 
         <div className="flex items-center gap-10">
-          <Button
-            onClick={handleApplyNow}
-          >
-            Apply Now
-          </Button>
+          <Button onClick={handleApplyNow}>Apply Now</Button>
           <Icon
             className={`fi-rr-angle-down transition-all duration-300 ease-in-out ${
               isOpen ? "rotate-180" : ""

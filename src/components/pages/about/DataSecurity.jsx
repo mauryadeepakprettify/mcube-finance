@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const DataSecurity = () => {
   return (
-    <section className="relative py-8 lg:py-16 pb-20">
+    <section className="relative py-8 pb-20 lg:py-16">
       <Image
         src="/vector/dot_b.svg"
         alt="data-security"
