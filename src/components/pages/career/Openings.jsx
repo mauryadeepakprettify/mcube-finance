@@ -32,8 +32,6 @@ const Openings = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(formData);
-
     try {
       applicationSchema.validateSync(formData, { abortEarly: true });
       successToast("Enquiry submitted successfully");
@@ -45,13 +43,13 @@ const Openings = () => {
   return (
     <>
       <section className="py-8 lg:py-16">
-        <div className="container flex max-w-6xl! gap-28">
-          <div className="flex-2">
-            <h2 className="sticky text-[32px] leading-[40px] lg:top-60">
+        <div className="container flex max-w-6xl! flex-col gap-10 lg:flex-row lg:gap-28">
+          <div className="lg:flex-2">
+            <h2 className="sticky text-center text-[28px] leading-[32px] md:text-[32px] md:leading-[40px] lg:top-60 lg:text-left">
               Current Openings in India
             </h2>
           </div>
-          <div className="flex-5">
+          <div className="lg:flex-5">
             {data.map((item) => (
               <OpeningCard
                 key={item._id}

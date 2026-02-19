@@ -20,7 +20,7 @@ const OpeningCard = ({ data, applicationRef }) => {
     <div className="border-t border-[#EFEFEF]">
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="flex cursor-pointer items-center justify-between py-6"
+        className="flex cursor-pointer items-center justify-between gap-3 py-6"
       >
         <div>
           <p className="mb-2 text-base leading-[24px]">
@@ -30,8 +30,10 @@ const OpeningCard = ({ data, applicationRef }) => {
           <p className="text-lambda text-base leading-[24px]">{type}</p>
         </div>
 
-        <div className="flex items-center gap-10">
-          <Button onClick={handleApplyNow}>Apply Now</Button>
+        <div className="flex items-center gap-4 md:gap-10">
+          <Button className="text-nowrap" onClick={handleApplyNow}>
+            Apply Now
+          </Button>
           <Icon
             className={`fi-rr-angle-down transition-all duration-300 ease-in-out ${
               isOpen ? "rotate-180" : ""

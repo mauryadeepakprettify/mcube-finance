@@ -20,8 +20,8 @@ const Info = () => {
             if you are interested in a rewarding career with us please send us
             an email or apply using the form on this page.
           </p>
-          <Link className="mt-10 block" href="/about">
-            <Button className="text-nowrap">
+          <Link className="mt-10  block" href="/about">
+            <Button className="text-nowrap md:mx-0 mx-auto">
               Current Openings <Icon className="fi-rr-arrow-right rotate-45" />
             </Button>
           </Link>

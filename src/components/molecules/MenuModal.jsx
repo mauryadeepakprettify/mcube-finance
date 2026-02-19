@@ -119,7 +119,7 @@ const data = [
   {
     _id: 5,
     label: "Careers",
-    route: "/careers",
+    route: "/career",
   },
   {
     _id: 6,

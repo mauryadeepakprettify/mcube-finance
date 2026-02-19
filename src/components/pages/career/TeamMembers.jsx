@@ -20,10 +20,10 @@ const TeamMembers = () => {
   const [swiper3, setSwiper3] = useState(null);
 
   return (
-    <section className="bg-beta py-8 lg:py-16">
+    <section className="bg-beta overflow-x-hidden py-8 lg:py-16">
       <div className="container">
-        <div className="grid grid-cols-2 gap-18">
-          <div>
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-18">
+          <div className="w-[96vw] lg:w-full">
             <Swiper
               loop={false}
               slidesPerView={1}
@@ -55,21 +55,21 @@ const TeamMembers = () => {
               ))}
             </Swiper>
           </div>
-          <div className="flex flex-col justify-between">
+          <div className="flex w-[96vw] flex-col justify-between lg:w-full">
             <div className="team-slider relative flex-1">
-              <p className="text-primary mb-8 tracking-widest uppercase">
+              <p className="text-primary mb-3 tracking-widest uppercase lg:mb-8">
                 Meet Our Team
               </p>
               <Swiper
-                className="h-[calc(100%-55px)]"
+                className="h-[calc(100%+35px)] lg:h-[calc(100%-55px)]"
                 loop={false}
                 slidesPerView={1}
                 spaceBetween={16}
                 allowTouchMove={false}
                 speed={900}
                 navigation={{
-                  nextEl: ".swiper-button-next",
-                  prevEl: ".swiper-button-prev",
+                  nextEl: ".swiper-button-prev",
+                  prevEl: ".swiper-button-next",
                 }}
                 pagination={{ type: "progressbar" }}
                 modules={[Navigation, Pagination, Controller]}
@@ -85,22 +85,26 @@ const TeamMembers = () => {
                 {data?.map(({ _id, img, about }) => (
                   <SwiperSlide key={_id}>
                     <>
-                      <h2 className="max-w-[80%] text-[40px] leading-[46px]">
+                      <h2 className="text-[24px] leading-[32px] lg:text-[40px] lg:leading-[46px] xl:max-w-[80%]">
                         {about}
                       </h2>
                     </>
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <div className="absolute bottom-6 left-0 flex items-center gap-6">
-                <SlideBtn className="swiper-button-prev static!" />
-                <span className="text-lambda text-xl leading-[45px]">
+              <div className="absolute -bottom-14 left-0 flex items-center gap-6 lg:bottom-6">
+                <button className="swiper-button-next static! mt-0! flex!">
+                  <Icon className="fi-rr-angle-right text-lambda rotate-180" />
+                </button>
+                <span className="text-lambda block text-xl leading-[45px]">
                   {fraction.current} / {fraction.total}
                 </span>
-                <SlideBtn className="swiper-button-next static!" />
+                <button className="swiper-button-prev static! mt-0! flex!">
+                  <Icon className="fi-rr-angle-right text-lambda" />
+                </button>
               </div>
             </div>
-            <div className="flex-0">
+            <div className="mt-16 flex-0 lg:mt-0">
               <Swiper
                 loop={true}
                 slidesPerView={2}
