@@ -79,7 +79,7 @@ const data = [
       "Collateral Valuations",
       "Cash Flow Modeling (ARGUS)",
     ],
-    img: "Servicers.svg",
+    img: "servicers.svg",
     route: "servicers",
   },
   {

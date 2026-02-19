@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Icon from "./Icon";
+import useClickOutside from "@/hooks/useClickOutside";
 
 const Select = ({
   variant = "",
@@ -14,6 +15,9 @@ const Select = ({
   options = [],
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const selectRef = useRef(null);
+
+  useClickOutside(selectRef, () => setIsOpen(false));
 
   const handleSelect = (val) => {
     onChange?.({
@@ -28,6 +32,7 @@ const Select = ({
   return (
     <>
       <div
+        ref={selectRef}
         className={`relative min-h-[40px] w-full cursor-pointer border-b ${
           variant === "light"
             ? "border-white/70 text-white/70"
