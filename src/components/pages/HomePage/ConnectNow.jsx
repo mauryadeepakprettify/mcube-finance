@@ -1,8 +1,12 @@
+"use client";
 import Button from "@/components/atoms/Button";
 import Icon from "@/components/atoms/Icon";
+import { useModal } from "@/hooks/useModal";
 import Image from "next/image";
 
 const ConnectNow = () => {
+  const { openModal } = useModal();
+
   return (
     <section className="bg-beta py-8 pb-12 lg:py-12">
       <div className="relative container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 lg:gap-32">
@@ -18,7 +22,7 @@ const ConnectNow = () => {
             We aspire to be the world’s most exceptional{" "}
             <span className="font-partner">financial</span> institution.
           </h2>
-          <Button className="mx-auto w-fit md:mx-0">
+          <Button onClick={() => openModal("enquire")} className="mx-auto w-fit md:mx-0">
             Connect Now <Icon className="fi-rr-angle-right" />
           </Button>
         </div>
