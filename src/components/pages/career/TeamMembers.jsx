@@ -36,7 +36,7 @@ const TeamMembers = () => {
                 <SwiperSlide key={_id}>
                   <figure className="relative">
                     <Image
-                      className="h-[462px] w-full object-cover"
+                      className="h-[357px] w-full object-cover md:h-[462px]"
                       src={`/images/banner/${img}`}
                       alt={about}
                       width={611}
@@ -68,8 +68,8 @@ const TeamMembers = () => {
                 allowTouchMove={false}
                 speed={900}
                 navigation={{
-                  nextEl: ".swiper-button-prev",
-                  prevEl: ".swiper-button-next",
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
                 }}
                 pagination={{ type: "progressbar" }}
                 modules={[Navigation, Pagination, Controller]}
@@ -93,15 +93,17 @@ const TeamMembers = () => {
                 ))}
               </Swiper>
               <div className="absolute -bottom-14 left-0 flex items-center gap-6 lg:bottom-6">
-                <button className="swiper-button-next static! mt-0! flex!">
-                  <Icon className="fi-rr-angle-right text-lambda rotate-180" />
-                </button>
+                <SlideBtn
+                  className="swiper-button-prev static!"
+                  mobileVisible={true}
+                />
                 <span className="text-lambda block text-xl leading-[45px]">
                   {fraction.current} / {fraction.total}
                 </span>
-                <button className="swiper-button-prev static! mt-0! flex!">
-                  <Icon className="fi-rr-angle-right text-lambda" />
-                </button>
+                <SlideBtn
+                  className="swiper-button-next static!"
+                  mobileVisible={true}
+                />
               </div>
             </div>
             <div className="mt-16 flex-0 lg:mt-0">

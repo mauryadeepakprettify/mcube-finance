@@ -133,14 +133,14 @@ const data = [
         stat: "$1.07 billion",
         description:
           "Created the model and prepared the rating agency tape, credit and memo.",
-        icon: "fi-ts-building",
+        img: "building.svg",
       },
       {
         _id: 2,
         stat: "$560 million",
         description:
           "Underwrote 430-asset, small balance multifamily portfolio for a multinational.",
-        icon: "fi-ts-stats",
+        img: "stat.svg",
       },
     ],
   },
@@ -153,14 +153,14 @@ const data = [
         stat: "$230 million",
         description:
           "Delivered full underwriting services for single family rental securitization.",
-        icon: "fi-ts-sack-dollar",
+        img: "dollar.svg",
       },
       {
         _id: 4,
         stat: "$225 million",
         description:
           "Performed underwriting and prepared credit memo for 50-asset hotel portfolio.",
-        icon: "fi-ts-wallet",
+        img: "wallet.svg",
       },
     ],
   },
@@ -173,14 +173,14 @@ const data = [
         stat: "$1.07 billion",
         description:
           "Created the model and prepared the rating agency tape, credit and memo.",
-        icon: "fi-ts-building",
+        img: "building.svg",
       },
       {
         _id: 2,
         stat: "$560 million",
         description:
           "Underwrote 430-asset, small balance multifamily portfolio for a multinational.",
-        icon: "fi-ts-stats",
+        img: "stat.svg",
       },
     ],
   },

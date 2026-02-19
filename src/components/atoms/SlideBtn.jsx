@@ -1,9 +1,9 @@
 import Icon from "./Icon";
 
-const SlideBtn = ({ className, icon, offset }) => {
+const SlideBtn = ({ className, icon, offset, mobileVisible = false }) => {
   return (
     <div
-      className={`hidden! lg:flex! ${className} mt-0!`}
+      className={`${mobileVisible ? "flex!" : "hidden! lg:flex!"} ${className} mt-0!`}
       style={className.includes("prev") ? { left: offset } : { right: offset }}
     >
       <Icon
